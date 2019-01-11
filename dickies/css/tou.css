@@ -19,11 +19,17 @@
 margin-right:353px;
 }
 .ul_shang li{
-font-size:13px;
+font-size:10px;
 float:left;
 padding-top:2px;
 padding-left:38px;
 line-height:36px;
+}
+
+.ul_shang li img{
+position:relative;
+top:5px;
+left:1px;
 }
 .ul_shang li a{
 color:#fff;
@@ -57,7 +63,7 @@ float:left;
 .li1{
 border-right:0.5px solid #fff;
 }
-.one a{
+.one>li>a{
 font-size:18.5px;
 color:#fff;
 font-weight:700;
@@ -66,10 +72,10 @@ padding:18px 26.5px 25px;
 .sousuo1{
 position:absolute;
 top:40px;
-left:945px;
+left:935px;
 }
 .sousuo2{
-width:224px;
+width:235px;
 border:1px solid #000;
 border-right:0;
 height:30px;
@@ -106,4 +112,29 @@ color:#ffffff;
 }
 .span2{
 color:#FF0000;
+}
+ul.one>li.li1>div{
+    position:absolute;
+    top:45px;
+    right:-260px;
+    border:1px solid #444;
+    width:1030px;
+    background: #fff;
+}
+div.xiala>div:first-child{
+    width: 12%;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.xiala>div>a{
+    color: #000;
+    padding:10px;
+    font-size:14px;
+    font-weight: 600;
+}
+.xiala>div>a:first-child{
+    align-self: flex-start;
+    font-weight: 800;
 }
