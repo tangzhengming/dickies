@@ -115,13 +115,13 @@ color:#ffffff;
 .span2{
 color:#FF0000;
 }
-ul.one>li.li1>div{
+ul.one>li>div.xiala{
     position:absolute;
     top:45px;
     right:-265px;
-    border:1px solid #444;
     width:1030px;
     background:#F2F2F2;
+    display:none;
 }
 .xiala{
     display: flex;
@@ -194,4 +194,23 @@ div.xiala>div.hleft{
 li:nth-child(6) div.xiala .hright{
     padding-left:465px;
     padding-top:50px;
+}
+.one li:nth-child(7) div.xiala>ul:first-child{
+    width:8%;
+}
+.one li:nth-child(7) div.xiala>ul:first-child>li{
+    border-right:1px solid #CFCFCF;
+    font-size:15px;
+}
+.one li:nth-child(7) div.xiala>ul:nth-child(2){
+    padding-left:0.5rem;
+}
+li:nth-child(7) div.xiala .hright{
+    padding-top:50px;
+    padding-left:335px;
+}
+.mon{
+    background:#fff;
+    color:#000;
+    text-decoration: underline;
 }
