@@ -4,6 +4,7 @@
  list-style:none;
  text-decoration:none;
  outline:none;
+ font-family:source han sans,microsoft yahei,Helvetica,Arial,sans-serif;
 }
 .head{
  width:100%;
@@ -51,6 +52,7 @@ height:98px;
 position:absolute;
 top:4px;
 left:10px;
+z-index: 10;
 }
 .one{
 position:absolute;
@@ -116,25 +118,80 @@ color:#FF0000;
 ul.one>li.li1>div{
     position:absolute;
     top:45px;
-    right:-260px;
+    right:-265px;
     border:1px solid #444;
     width:1030px;
-    background: #fff;
+    background:#F2F2F2;
 }
-div.xiala>div:first-child{
+.xiala{
+    display: flex;
+}
+div.xiala>div.hleft,div.hzhong{
     width: 12%;
-    padding: 1rem 1rem;
+    margin: 1.5rem 0 1rem 0;
+    padding:0 1rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+
+}
+div.xiala>div.hleft{
+    border-right:2px solid #CFCFCF;
 }
 .xiala>div>a{
     color: #000;
-    padding:10px;
-    font-size:14px;
-    font-weight: 600;
+    padding:6px ;
+    font-size:15px;
+}
+.xiala>div>a:hover{
+    text-decoration: underline
 }
 .xiala>div>a:first-child{
-    align-self: flex-start;
     font-weight: 800;
+    padding-top:0;
+}
+.xiala>.hleft:first-child>a:first-child{
+    align-self: flex-start;
+}
+.xiala>div.hright{
+    padding-left:310px;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+}
+.xiala>div.hright a{
+    font-size:17px;
+    padding:1.5rem 0 2.5rem 0;
+}
+.one li:nth-child(3) div.xiala .hright, li:nth-child(4) div.xiala .hright, li:nth-child(5) div.xiala .hright{
+    padding-left:445px;
+    padding-top:50px;
+}
+.xiala>ul{
+    clear: both;
+    width:12%;
+    display:flex;
+    flex-flow:column nowrap;
+    padding:1rem 1.5rem 1.5rem 2rem;
+}
+.xiala>ul>li{
+  padding:6px;
+}
+.xiala>ul>li>a{
+    color:#000;
+    font-size:15px;
+}
+.xiala>ul>li>a:hover{
+    text-decoration: underline;
+}
+.one li:nth-child(6) div.xiala>ul{
+    width:10%;
+    align-items: center;
+}
+.one li:nth-child(6) div.xiala>ul>li:first-child,.one li:nth-child(6) div.xiala>ul>li:last-child{
+    align-self: flex-start;
+}
+li:nth-child(6) div.xiala .hright{
+    padding-left:465px;
+    padding-top:50px;
 }
