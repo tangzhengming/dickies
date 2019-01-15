@@ -255,3 +255,39 @@ div>input{
 	text-indent: 8px;
 	border:1px solid #aaa;
 }
+div.label>ul:nth-child(5),ul:nth-child(7){
+	clear: both;
+}
+div.label>ul li input{
+	width:19px;
+	height:19px;
+	vertical-align: middle;
+	margin-right:10px;
+}
+div.label>ul:nth-child(5)>li{
+	float: left;
+	margin-right:65px;
+}
+div.label>ul:nth-child(5)>li>ul li,div.label>ul:nth-child(7)>li>ul li{
+	padding:4px 0 10px 0;
+}
+div.label>ul:nth-child(7)>li{
+	float:left;
+	width:125px;
+	padding-right:10px;
+}
+button{
+	width:112px;
+	height: 36px;
+	border-radius:3px;
+	color:#fff;
+	border:2px solid #c41230;
+	background:#c41230;
+	font-size:16px;
+}
+button:hover{
+	background:#fff;
+	color:#c41230;
+	cursor:pointer;
+	transition:all .2s linear;
+}

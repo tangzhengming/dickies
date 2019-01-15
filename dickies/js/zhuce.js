@@ -3,7 +3,6 @@ $(function(){
     $('#foot').load('./weibu.html');
   })
  var inputs=document.querySelectorAll("form>div.biao>div.label_input>div>input")
- console.log(inputs);
  for(var input of inputs){
    input.onfocus=function(){
      var inp=this;
@@ -23,3 +22,14 @@ $(function(){
     }
    }
  }
+
+ $("button").click(function(){
+   var $btn=$(this);
+   console.log($btn);
+   var $inp=$(".label_input>div>input");
+   console.log($inp);
+   if($inp.val()==""){
+     $inp.addClass("input_red")
+     .next().html("这是必填项")
+   }
+ })

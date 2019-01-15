@@ -52,7 +52,7 @@
 							<div class='label_input'>
 							<div>
 								<label for="sname"><span class='span1'>姓名</span><span class='span2'>*</span></label>
-								<input type="text" id='sname'>
+								<input type="text" id='sname' name="uname">
 								<span class='bitian'></span>
 							</div>
 							</div>
@@ -69,7 +69,7 @@
 							 </div>
 							 <div>
 								<label for="semail"><span class='span1'>确认电子邮箱</span><span class='span2'>*</span></label>
-								<input type="text" id='semail'>
+								<input type="text" id='semail' name="email">
 								<span class='bitian'></span>
 							 </div>	
 							 <div>
@@ -80,12 +80,12 @@
 							 </div>
 							 <div>
 								<label for="spuwd"><span class='span1'>确认密码</span><span class='span2'>*</span></label>
-								<input type="text" id='spuwd'>
+								<input type="text" id='spuwd' name="upwd">
 								<span class='bitian'></span>
 							 </div>
 							 <div>
 								<label for="phone"><span class='span1'>手机号码</span><span class='span2'>*</span></label>
-								<input type="text" id='phone'>
+								<input type="text" id='phone' name="phone">
 								<span class='bitian'></span>
 							</div>		
 						</div>
@@ -99,112 +99,187 @@
         			</div>
 					<div class="label">
 					 <div id="sex">
-					  <label for="man"><input type="radio" id="man" name='sex'>男</label>
-					  <label for="woman"><input type="radio" id="woman" name='sex'>女</label>
+					  <label for="man"><input type="radio" id="man" name='sex' value='1'>男</label>
+					  <label for="woman"><input type="radio" id="woman" name='sex' value="0">女</label>
 					 </div>
-					<p>生日:</p>
-					<div class="age"> 
-					 <select name="year" id="year">
-					  <option value="year">年</option>
-					  <option value="2005">2005年</option>
-					  <option value="2004">2004年</option>
-					  <option value="2003">2003年</option>
-					  <option value="2002">2002年</option>
-					  <option value="2001">2001年</option>
-					  <option value="2000">2000年</option>
-					  <option value="1999">1999年</option>
-					  <option value="1998">1998年</option>
-					  <option value="1997">1997年</option>
-					  <option value="1996">1996年</option>
-					  <option value="1995">1995年</option>
-					  <option value="1994">1994年</option>
-					  <option value="1993">1993年</option>
-					  <option value="1992">1992年</option>
-					  <option value="1991">1991年</option>
-					  <option value="1990">1990年</option>
-					  <option value="1989">1989年</option>
-					  <option value="1988">1988年</option>
-					  <option value="1987">1987年</option>
-					  <option value="1986">1986年</option>
-					  <option value="1985">1985年</option>
-					  <option value="1984">1984年</option>
-					  <option value="1983">1983年</option>
-					  <option value="1982">1982年</option>
-					  <option value="1981">1981年</option>
-					  <option value="1980">1980年</option>
-					  <option value="1979">1979年</option>
-					  <option value="1978">1978年</option>
-					  <option value="1977">1977年</option>
-					  <option value="1976">1976年</option>
-					  <option value="1975">1975年</option>
-					  <option value="1974">1974年</option>
-					  <option value="1973">1973年</option>
-					  <option value="1972">1972年</option>
-					  <option value="1971">1971年</option>
-					  <option value="1970">1970年</option>
-					  <option value="1969">1969年</option>
-					  <option value="1968">1968年</option>
-					  <option value="1967">1967年</option>
-					  <option value="1966">1966年</option>
-					  <option value="1965">1965年</option>
-					  <option value="1964">1964年</option>
-					  <option value="1963">1963年</option>
-					  <option value="1962">1962年</option>
-					  <option value="1961">1961年</option>
-					  <option value="1960">1960年</option>
-					 </select>
-					 <select name="mondh" id="month">
-					  <option value="1">月</option>
-					  <option value="2">1月</option>
-					  <option value="3">2月</option>
-					  <option value="3">3月</option>
-					  <option value="4">4月</option>
-					  <option value="5">5月</option>
-					  <option value="6">6月</option>
-					  <option value="7">7月</option>
-					  <option value="8">8月</option>
-					  <option value="9">9月</option>
-					  <option value="10">10月</option>
-					  <option value="11">11月</option>
-					  <option value="12">12月</option>
-					 </select>
-					 <select name="day" id="day">
-					  <option value="day">日</option>
-					  <option value="1">1日</option>
-					  <option value="2">2日</option>
-					  <option value="3">3日</option>
-					  <option value="4">4日</option>
-					  <option value="5">5日</option>
-					  <option value="6">6日</option>
-					  <option value="7">7日</option>
-					  <option value="8">8日</option>
-					  <option value="9">9日</option>
-					  <option value="10">10日</option>
-					  <option value="11">11日</option>
-					  <option value="12">12日</option>
-					  <option value="13">13日</option>
-					  <option value="14">14日</option>
-					  <option value="15">15日</option>
-					  <option value="16">16日</option>
-					  <option value="17">17日</option>
-					  <option value="18">18日</option>
-					  <option value="19">19日</option>
-					  <option value="20">20日</option>
-					  <option value="21">21日</option>
-					  <option value="22">22日</option>
-					  <option value="23">23日</option>
-					  <option value="24">24日</option>
-					  <option value="25">25日</option>
-					  <option value="26">26日</option>
-					  <option value="27">27日</option>
-					  <option value="28">28日</option>
-					  <option value="29">29日</option>
-					  <option value="30">30日</option>
-					  <option value="31">31日</option>
-					 </select>
-					</div>
+					 <p>生日:</p>
+					 <div class="age"> 
+					  <select name="birthday" id="year">
+						<option value="year">年</option>
+						<option value="2005">2005年</option>
+						<option value="2004">2004年</option>
+						<option value="2003">2003年</option>
+						<option value="2002">2002年</option>
+						<option value="2001">2001年</option>
+						<option value="2000">2000年</option>
+						<option value="1999">1999年</option>
+						<option value="1998">1998年</option>
+						<option value="1997">1997年</option>
+						<option value="1996">1996年</option>
+						<option value="1995">1995年</option>
+						<option value="1994">1994年</option>
+						<option value="1993">1993年</option>
+						<option value="1992">1992年</option>
+						<option value="1991">1991年</option>
+						<option value="1990">1990年</option>
+						<option value="1989">1989年</option>
+						<option value="1988">1988年</option>
+						<option value="1987">1987年</option>
+						<option value="1986">1986年</option>
+						<option value="1985">1985年</option>
+						<option value="1984">1984年</option>
+						<option value="1983">1983年</option>
+						<option value="1982">1982年</option>
+						<option value="1981">1981年</option>
+						<option value="1980">1980年</option>
+						<option value="1979">1979年</option>
+						<option value="1978">1978年</option>
+						<option value="1977">1977年</option>
+						<option value="1976">1976年</option>
+						<option value="1975">1975年</option>
+						<option value="1974">1974年</option>
+						<option value="1973">1973年</option>
+						<option value="1972">1972年</option>
+						<option value="1971">1971年</option>
+						<option value="1970">1970年</option>
+						<option value="1969">1969年</option>
+						<option value="1968">1968年</option>
+						<option value="1967">1967年</option>
+						<option value="1966">1966年</option>
+						<option value="1965">1965年</option>
+						<option value="1964">1964年</option>
+						<option value="1963">1963年</option>
+						<option value="1962">1962年</option>
+						<option value="1961">1961年</option>
+						<option value="1960">1960年</option>
+						</select>
+					  <select name="birthday" id="month">
+							<option value="month">月</option>
+							<option value="2">1月</option>
+							<option value="3">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+							<option value="5">5月</option>
+							<option value="6">6月</option>
+							<option value="7">7月</option>
+							<option value="8">8月</option>
+							<option value="9">9月</option>
+							<option value="10">10月</option>
+							<option value="11">11月</option>
+							<option value="12">12月</option>
+					  </select>
+					  <select name="birthday" id="day">
+						<option value="day">日</option>
+						<option value="1">1日</option>
+						<option value="2">2日</option>
+						<option value="3">3日</option>
+						<option value="4">4日</option>
+						<option value="5">5日</option>
+						<option value="6">6日</option>
+						<option value="7">7日</option>
+						<option value="8">8日</option>
+						<option value="9">9日</option>
+						<option value="10">10日</option>
+						<option value="11">11日</option>
+						<option value="12">12日</option>
+						<option value="13">13日</option>
+						<option value="14">14日</option>
+						<option value="15">15日</option>
+						<option value="16">16日</option>
+						<option value="17">17日</option>
+						<option value="18">18日</option>
+						<option value="19">19日</option>
+						<option value="20">20日</option>
+						<option value="21">21日</option>
+						<option value="22">22日</option>
+						<option value="23">23日</option>
+						<option value="24">24日</option>
+						<option value="25">25日</option>
+						<option value="26">26日</option>
+						<option value="27">27日</option>
+						<option value="28">28日</option>
+						<option value="29">29日</option>
+						<option value="30">30日</option>
+						<option value="31">31日</option>
+					  </select>
+					 </div>
+					 <p>选择您的职业:</p>
+					 <ul>
+					  <li>
+					   <ul>
+					  	<li><label for="fw"><input type="checkbox" id="fw">服务业</label></li>
+						<li><label for="mo"><input type="checkbox" id="mo">金融</label></li>
+						<li><label for="gl"><input type="checkbox" id="gl">管理</label></li>
+						<li><label for="jz"><input type="checkbox" id="jz">建筑</label></li>
+						<li><label for="IT"><input type="checkbox" id="IT">IT</label></li>
+						<li><label for="xs"><input type="checkbox" id="xs">销售</label></li>
+					   </ul>
+					  </li>
+					  <li>
+					   	<ul>
+					  	<li><label for="fdc"><input type="checkbox" id="fdc">房地产</label></li>
+						<li><label for="ly"><input type="checkbox" id="ly">旅游</label></li>
+						<li><label for="ys"><input type="checkbox" id="yx">医生</label></li>
+						<li><label for="js"><input type="checkbox" id="js">教师</label></li>
+						<li><label for="xsh"><input type="checkbox" id="xsh">学生</label></li>
+						<li><label for="qt"><input type="checkbox" id="qt">其他</label></li>
+					   </ul>
+					  </li>	
+					 </ul>
+					 <p>选择你最有兴趣的事:</p>
+					 <ul>
+					  <li>
+					   <ul>
+					  	<li><label for="fspj"><input type="checkbox" id="fspj">服饰配件</label></li>
+						<li><label for="ny"><input type="checkbox" id="ny">内衣</label></li>
+						<li><label for="xb"><input type="checkbox" id="xb">箱包</label></li>
+						<li><label for="zbhj"><input type="checkbox" id="zbhj">珠宝黄金</label></li>
+						<li><label for="jjbx"><input type="checkbox" id="jjbx">居家布艺</label></li>
+						<li><label for="nz"><input type="checkbox" id="nz">男装</label></li>
+						<li><label for="yl"><input type="checkbox" id="yl">娱乐</label></li>
+						<li><label for="qxhw"><input type="checkbox" id="qxhw">骑行户外</label></li>
+					   </ul>
+					  </li>
+					  <li>
+					   	<ul>
+					  	<li><label for="sm"><input type="checkbox" id="sm">数码</label></li>
+						<li><label for="ydx"><input type="checkbox" id="ydx">运动休闲服装</label></li>
+						<li><label for="wjdg"><input type="checkbox" id="wjdg">五金电工</label></li>
+						<li><label for="qz"><input type="checkbox" id="qz">亲子</label></li>
+						<li><label for="ydxx"><input type="checkbox" id="ydxx">运动休闲服装</label></li>
+						<li><label for="my"><input type="checkbox" id="my">母婴</label></li>
+						<li><label for="qc"><input type="checkbox" id="qc">汽车</label></li>
+						<li><label for="sssp"><input type="checkbox" id="sssp">首饰饰品</label></li>
+					   </ul>
+					  </li>
+					  <li>
+					   	<ul>
+					  	<li><label for="jypx"><input type="checkbox" id="jypx">教育培训</label></li>
+						<li><label for="sjzz"><input type="checkbox" id="sjzz">书籍杂志</label></li>
+						<li><label for="mrmz"><input type="checkbox" id="mrmz">美容美妆</label></li>
+						<li><label for="lol"><input type="checkbox" id="lol">游戏</label></li>
+						<li><label for="smyy"><input type="checkbox" id="smyy">数码影音</label></li>
+						<li><label for="shyl"><input type="checkbox" id="shyl">生活娱乐</label></li>
+						<li><label for="nx"><input type="checkbox" id="nx">男鞋</label></li>
+						<li><label for="yybjp"><input type="checkbox" id="yybjp">营养保健品</label></li>
+					   </ul>
+					  </li>
+					  <li>
+					   	<ul>
+					  	<li><label for="yq"><input type="checkbox" id="yq">乐器</label></li>
+						<li><label for="ll"><input type="checkbox" id="ll">零食</label></li>
+						<li><label for="jj"><input type="checkbox" id="jj">酒</label></li>
+						<li><label for="lvy"><input type="checkbox" id="lvy">旅游</label></li>
+						<li><label for="yddx"><input type="checkbox" id="yddx">运动鞋</label></li>
+						<li><label for="vx"><input type="checkbox" id="vx">女鞋</label></li>
+						<li><label for="ydyp"><input type="checkbox" id="ydyp">运动用品</label></li>
+						<li><label for="jjry"><input type="checkbox" id="jjry">居家日用</label></li>
+					   </ul>
+					  </li>				
+					 </ul>
 					</div>
 				</div>
+				<button>应用</button>
         	</form>
         </div>	
 	 </div>
