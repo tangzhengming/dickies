@@ -213,4 +213,5 @@ li:nth-child(7) div.xiala .hright{
     background:#fff;
     color:#000 !important;
     text-decoration: underline;
+    transition:all .1s linear;
 }

@@ -1,4 +1,5 @@
-var inputs=document.querySelectorAll("form>input");
+// DOM操作 失去获得焦点事件
+/*var inputs=document.querySelectorAll("form>input");
 for(var input of inputs){
 	console.log(input);
 	input.onfocus=function(){
@@ -18,4 +19,20 @@ for(var input of inputs){
 			span.innerHTML="";
 		}
 	 }
-}
+}*/
+//juqery操作  失去获得焦点事件
+$(":input").focus(function(){
+	var $inp=$(this);
+	if(!$inp.hasClass("input_red"))
+	$inp.addClass("input_black");
+})
+.blur(function(){
+	var $inp=$(this);
+	if($inp.val()==""){
+		$inp.addClass("input_red")
+		.next().html("这是必填项");
+	}else{
+		$inp.removeClass()
+		.next().html("");
+	}
+})
