@@ -16,9 +16,13 @@ for(var li of lis){
         div.style.display="none";
     }
 }*/
+//jqery下拉菜单
 $("ul.one>li").hover(function(){
-    console.log($("ul.one>li"))
-    console.log($(this).first());
-    $(this).first().toggleClass("mon")
-    
+    var $a=$(this).children(":first")//.first()
+    $a.addClass("mon")
+    .next().css("display","flex");
+},function(){
+    var $a=$(this).children("a");
+    $a.removeClass()
+    .next().css("display","none");
 })

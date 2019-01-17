@@ -52,5 +52,4 @@
      $inp.removeClass()
      .next().html("");
    }
-   
  })
