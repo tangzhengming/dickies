@@ -57,15 +57,19 @@
 //button按钮加载input框
 $("button").click(function(e){
   e.preventDefault();
+  var $chebox=$(".read>input:checkbox:not(:checked)");
   $(":text").each(function(){
-  if($(this).val()==""){
+  if($(this).val()==""&&$chebox){
     $(this).addClass("input_red")
     .next().html("这是必填项");
+    $chebox.next().html("这是必填项")
   }else{
     $(this).removeClass()
     .next().html("");
-  }
- })
+    var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮箱不正确');
+    form.submit();
+   }
+  })
 })
 
 function vail(txt,reg,html){
@@ -73,12 +77,16 @@ function vail(txt,reg,html){
      txt.prev().css("color","#c41230")
      .next().addClass("input_red")
      .next().html(html)  
+     return false;
   }else{
     txt.prev().css("color","#444")
     .next().removeClass()
     .next().html("");
+    return true;
   }
 }
-$("button").on(click,function(){
-  
+/*$("button").on("click",function(){
+   
+    
 })
+*/
