@@ -55,19 +55,23 @@
     })
 })*/
 //button按钮加载input框
+
 $("button").click(function(e){
   e.preventDefault();
   var $chebox=$(".read>input:checkbox:not(:checked)");
+  console.log($chebox);
   $(":text").each(function(){
   if($(this).val()==""&&$chebox){
     $(this).addClass("input_red")
     .next().html("这是必填项");
-    $chebox.next().html("这是必填项")
+    $chebox.parent().children("span").html("这是必填项");
   }else{
     $(this).removeClass()
     .next().html("");
-    var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮箱不正确');
-    form.submit();
+    $chebox.parent().children("span").html("");
+    var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
+    var semail=vail($("#semail"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
+    var puwd=vail($("#puwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
    }
   })
 })
