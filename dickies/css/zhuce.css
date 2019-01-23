@@ -137,7 +137,7 @@ form{
 	color:#c41230;
 	font-weight: 700;
 }
-div>input{
+.input_gray>input{
 	width:99%;
 	height:40px;
 	border:1px solid #ccc;
@@ -146,10 +146,10 @@ div>input{
 	padding-left:8px;
 	}
 .input_black{
-	border:1px solid #444;
+	border:1px solid #444 !important;
 }
 .input_red{
-	border:1px solid #c41230;
+	border:1px solid #c41230 !important;
 }
 .biao>div:nth-child(2)>div:nth-child(3)>div{
 	color:#aaa;

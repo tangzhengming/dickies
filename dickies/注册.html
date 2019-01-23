@@ -44,13 +44,13 @@
         	<h1>创建账户
         	<div class='xu'></div>
         	</h1>
-        	<form action="">
+        	<form action="" id="formSet">
         		<div class='biao'>
         			<div class='title'>
         				<span claas='sp1'>名称</span><span class='sp2'>*必填</span>
         			</div>
 					<div class='label_input'>
-						<div>
+						<div class="input_gray">
 							<label for="sname"><span class='span1'>姓名</span><span class='span2'>*</span></label>
 							<input type="text" id='sname' name="uname">
 							<span class='bitian'></span>
@@ -62,28 +62,28 @@
         				<span claas='sp1'>邮箱和登录信息</span><span class='sp2'>*必填</span>
         			</div>
 					<div class='label_input'>
-						<div>
+						<div class="input_gray">
 							<label for="email"><span class='span1'>电子邮箱</span><span class='span2'>*</span></label>
 							<input type="text" id='email'>
 							<span class='bitian'></span>
 						</div>
-						<div>
+						<div class="input_gray">
 							<label for="semail"><span class='span1'>确认电子邮箱</span><span class='span2'>*</span></label>
 							<input type="text" id='semail' name="email">
 							<span class='bitian'></span>
 						</div>	
-						<div>
+						<div class="input_gray">
 							<label for="puwd"><span class='span1'>密码</span><span class='span2'>*</span></label>
 							<input type="text" id='puwd'>
 							<span class='bitian'></span>
 							<div>8~255个字符</div>
 						</div>
-						<div>
+						<div class="input_gray">
 							<label for="spuwd"><span class='span1'>确认密码</span><span class='span2'>*</span></label>
 							<input type="text" id='spuwd' name="upwd">
 							<span class='bitian'></span>
 						</div>
-						<div>
+						<div class="input_gray">
 							<label for="phone"><span class='span1'>手机号码</span><span class='span2'>*</span></label>
 							<input type="text" id='phone' name="phone">
 							<span class='bitian'></span>
@@ -108,7 +108,7 @@
 					 <p>生日:</p>
 					 <div class="age"> 
 					  <select name="birthday" id="year">
-						<option value="year">年</option>
+						<option value="">年</option>
 						<option value="2005">2005年</option>
 						<option value="2004">2004年</option>
 						<option value="2003">2003年</option>
@@ -157,7 +157,7 @@
 						<option value="1960">1960年</option>
 						</select>
 					  <select name="birthday" id="month">
-							<option value="month">月</option>
+							<option value="">月</option>
 							<option value="2">1月</option>
 							<option value="3">2月</option>
 							<option value="3">3月</option>
@@ -172,7 +172,7 @@
 							<option value="12">12月</option>
 					  </select>
 					  <select name="birthday" id="day">
-						<option value="day">日</option>
+						<option value="">日</option>
 						<option value="1">1日</option>
 						<option value="2">2日</option>
 						<option value="3">3日</option>
@@ -210,22 +210,22 @@
 					 <ul>
 					  <li>
 					   <ul>
-					  	<li><label for="fw"><input type="checkbox" id="fw">服务业</label></li>
-						<li><label for="mo"><input type="checkbox" id="mo">金融</label></li>
-						<li><label for="gl"><input type="checkbox" id="gl">管理</label></li>
-						<li><label for="jz"><input type="checkbox" id="jz">建筑</label></li>
-						<li><label for="IT"><input type="checkbox" id="IT">IT</label></li>
-						<li><label for="xs"><input type="checkbox" id="xs">销售</label></li>
+					  	<li><label><input type="checkbox">服务业</label></li>
+						<li><label><input type="checkbox">金融</label></li>
+						<li><label><input type="checkbox">管理</label></li>
+						<li><label><input type="checkbox">建筑</label></li>
+						<li><label><input type="checkbox">IT</label></li>
+						<li><label><input type="checkbox">销售</label></li>
 					   </ul>
 					  </li>
 					  <li>
 					   	<ul>
-					  	<li><label for="fdc"><input type="checkbox" id="fdc">房地产</label></li>
-						<li><label for="ly"><input type="checkbox" id="ly">旅游</label></li>
-						<li><label for="ys"><input type="checkbox" id="yx">医生</label></li>
-						<li><label for="js"><input type="checkbox" id="js">教师</label></li>
-						<li><label for="xsh"><input type="checkbox" id="xsh">学生</label></li>
-						<li><label for="qt"><input type="checkbox" id="qt">其他</label></li>
+					  	<li><label><input type="checkbox">房地产</label></li>
+						<li><label><input type="checkbox">旅游</label></li>
+						<li><label><input type="checkbox">医生</label></li>
+						<li><label><input type="checkbox">教师</label></li>
+						<li><label><input type="checkbox">学生</label></li>
+						<li><label><input type="checkbox">其他</label></li>
 					   </ul>
 					  </li>	
 					 </ul>
@@ -233,50 +233,50 @@
 					 <ul>
 					  <li>
 					   <ul>
-					  	<li><label for="fspj"><input type="checkbox" id="fspj">服饰配件</label></li>
-						<li><label for="ny"><input type="checkbox" id="ny">内衣</label></li>
-						<li><label for="xb"><input type="checkbox" id="xb">箱包</label></li>
-						<li><label for="zbhj"><input type="checkbox" id="zbhj">珠宝黄金</label></li>
-						<li><label for="jjbx"><input type="checkbox" id="jjbx">居家布艺</label></li>
-						<li><label for="nz"><input type="checkbox" id="nz">男装</label></li>
-						<li><label for="yl"><input type="checkbox" id="yl">娱乐</label></li>
-						<li><label for="qxhw"><input type="checkbox" id="qxhw">骑行户外</label></li>
+					  	<li><label><input type="checkbox">服饰配件</label></li>
+						<li><label><input type="checkbox">内衣</label></li>
+						<li><label><input type="checkbox">箱包</label></li>
+						<li><label><input type="checkbox">珠宝黄金</label></li>
+						<li><label><input type="checkbox">居家布艺</label></li>
+						<li><label><input type="checkbox">男装</label></li>
+						<li><label><input type="checkbox">娱乐</label></li>
+						<li><label><input type="checkbox">骑行户外</label></li>
 					   </ul>
 					  </li>
 					  <li>
 					   	<ul>
-					  	<li><label for="sm"><input type="checkbox" id="sm">数码</label></li>
-						<li><label for="ydx"><input type="checkbox" id="ydx">运动休闲服装</label></li>
-						<li><label for="wjdg"><input type="checkbox" id="wjdg">五金电工</label></li>
-						<li><label for="qz"><input type="checkbox" id="qz">亲子</label></li>
-						<li><label for="ydxx"><input type="checkbox" id="ydxx">运动休闲服装</label></li>
-						<li><label for="my"><input type="checkbox" id="my">母婴</label></li>
-						<li><label for="qc"><input type="checkbox" id="qc">汽车</label></li>
-						<li><label for="sssp"><input type="checkbox" id="sssp">首饰饰品</label></li>
+					  	<li><label><input type="checkbox">数码</label></li>
+						<li><label><input type="checkbox">运动休闲服装</label></li>
+						<li><label><input type="checkbox">五金电工</label></li>
+						<li><label><input type="checkbox">亲子</label></li>
+						<li><label><input type="checkbox">运动休闲服装</label></li>
+						<li><label><input type="checkbox">母婴</label></li>
+						<li><label><input type="checkbox">汽车</label></li>
+						<li><label><input type="checkbox">首饰饰品</label></li>
 					   </ul>
 					  </li>
 					  <li>
 					   	<ul>
-					  	<li><label for="jypx"><input type="checkbox" id="jypx">教育培训</label></li>
-						<li><label for="sjzz"><input type="checkbox" id="sjzz">书籍杂志</label></li>
-						<li><label for="mrmz"><input type="checkbox" id="mrmz">美容美妆</label></li>
-						<li><label for="lol"><input type="checkbox" id="lol">游戏</label></li>
-						<li><label for="smyy"><input type="checkbox" id="smyy">数码影音</label></li>
-						<li><label for="shyl"><input type="checkbox" id="shyl">生活娱乐</label></li>
-						<li><label for="nx"><input type="checkbox" id="nx">男鞋</label></li>
-						<li><label for="yybjp"><input type="checkbox" id="yybjp">营养保健品</label></li>
+					  	<li><label><input type="checkbox">教育培训</label></li>
+						<li><label><input type="checkbox">书籍杂志</label></li>
+						<li><label><input type="checkbox">美容美妆</label></li>
+						<li><label><input type="checkbox">游戏</label></li>
+						<li><label><input type="checkbox">数码影音</label></li>
+						<li><label><input type="checkbox">生活娱乐</label></li>
+						<li><label><input type="checkbox">男鞋</label></li>
+						<li><label><input type="checkbox">营养保健品</label></li>
 					   </ul>
 					  </li>
 					  <li>
 					   	<ul>
-					  	<li><label for="yq"><input type="checkbox" id="yq">乐器</label></li>
-						<li><label for="ll"><input type="checkbox" id="ll">零食</label></li>
-						<li><label for="jj"><input type="checkbox" id="jj">酒</label></li>
-						<li><label for="lvy"><input type="checkbox" id="lvy">旅游</label></li>
-						<li><label for="yddx"><input type="checkbox" id="yddx">运动鞋</label></li>
-						<li><label for="vx"><input type="checkbox" id="vx">女鞋</label></li>
-						<li><label for="ydyp"><input type="checkbox" id="ydyp">运动用品</label></li>
-						<li><label for="jjry"><input type="checkbox" id="jjry">居家日用</label></li>
+					  	<li><label><input type="checkbox">乐器</label></li>
+						<li><label><input type="checkbox">零食</label></li>
+						<li><label><input type="checkbox">酒</label></li>
+						<li><label><input type="checkbox">旅游</label></li>
+						<li><label><input type="checkbox">运动鞋</label></li>
+						<li><label><input type="checkbox">女鞋</label></li>
+						<li><label><input type="checkbox">运动用品</label></li>
+						<li><label><input type="checkbox">居家日用</label></li>
 					   </ul>
 					  </li>				
 					 </ul>
@@ -286,7 +286,7 @@
         	</form>
         </div>	
 	 </div>
-	<div id='foot'></div>
+	<div id='footer'></div>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script src="js/jquery-1.11.3.js"></script>
 	<script type="text/javascript" src="js/zhuce.js"></script>

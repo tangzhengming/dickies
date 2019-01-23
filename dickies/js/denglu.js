@@ -1,3 +1,7 @@
+$(function(){
+	$('#header').load('./header.html');
+	$('#footer').load('./weibu.html');
+  })
 // DOM操作 失去获得焦点事件
 /*var inputs=document.querySelectorAll("form>input");
 for(var input of inputs){
@@ -21,7 +25,8 @@ for(var input of inputs){
 	 }
 }*/
 //juqery操作  失去获得焦点事件
-$(":input").focus(function(){
+$("form>input").focus(function(){
+	console.log($(".you>input"));
 	var $inp=$(this);
 	if(!$inp.hasClass("input_red"))
 	$inp.addClass("input_black");

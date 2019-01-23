@@ -1,10 +1,10 @@
  //引入头部
-/* 
+
  $(function(){
      $('#header').load('./header.html');
-     $('#foot').load('./weibu.html');
+     $('#footer').load('./weibu.html');
    })
-*/   
+
    //DOM操作 获得焦点失去焦点事件
  /*var inputs=document.querySelectorAll("form>div.biao>div.label_input>div>input")
  for(var input of inputs){
@@ -55,15 +55,16 @@
     })
 })*/
 //button按钮加载input框
-
+var form=document.forms[0];
+console.log(form)
 $("button").click(function(e){
     e.preventDefault();
     var $chebox=$(".read>input:checkbox").prop("checked");
     console.log($chebox);
     if(!$chebox){
         $(".read>span").html("这是必填项");
-    }
-    $(":text").each(function(){
+    }else{$(".read>span").html("");}
+    $(".input_gray>input").each(function(){
       if($(this).val()==""){
           $(this).addClass("input_red").next().html("这是必填项");
       }else{
@@ -75,7 +76,15 @@ $("button").click(function(e){
               var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
               var semail=vail($("#semail"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
               var puwd=vail($("#puwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
-          }
+              var spuwd=vail($("#spuwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
+              var phone=vail($("#phone"),/^1(3|4|5|7|8)\d{9}$/,"请输入有效的手机号码");
+               if($("#email").val()==$("#semail").val()&&$("#puwd").val()==$("#spuwd").val()&&phone&&semail&&spuwd){
+                ajax();
+            }else{
+                e.stopPropagation();
+                alert("信息填写有误,请核实注册信息")
+            }
+        }
       }
     })
 })
@@ -92,6 +101,11 @@ function vail(txt,reg,html){
     .next().html("");
     return true;
   }
+}
+function ajax(){
+    $.ajax({
+        url:""
+    })
 }
 /*$("button").on("click",function(){
    
