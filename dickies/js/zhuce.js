@@ -103,8 +103,14 @@ function vail(txt,reg,html){
   }
 }
 function ajax(){
+     var sname=("#sname").val()
+     var semail=("#semail").val()
+     var spuwd=("#spuwd").val()
+     var phone=("#phone").val()
     $.ajax({
-        url:""
+        url:"http:/127.0.0.1:3001/zhuce",
+        type:"post",
+        
     })
 }
 /*$("button").on("click",function(){

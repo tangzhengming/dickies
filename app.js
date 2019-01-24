@@ -10,5 +10,5 @@ server.use(express.static("dickies"));
 server.use(bodyParser.urlencoded({
     extended:false
 }));
-server.use('/user',user);
-//127.0.0.1:3000/user
+server.use('/zhuce',user);
+//127.0.0.1:3000/zhuce
