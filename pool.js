@@ -1,4 +1,4 @@
-const mysql=require("mysql");
+ const mysql=require("mysql");
 //创建连接池对象
 var pool=mysql.createPool({
     host:'127.0.0.1',
@@ -9,4 +9,4 @@ var pool=mysql.createPool({
     connectionLimit:20
 });
 //导出连接池对象
-module.exprots=pool;
+module.exports=pool;
