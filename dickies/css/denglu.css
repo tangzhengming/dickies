@@ -442,3 +442,15 @@ form{
 .input_red{
     border:1px solid #c41230;
 }
+.notlogin{
+    display:none;
+    color:#FF0000;
+    line-height: 25px;
+    margin:0.5rem 0;
+    padding:1rem 2.5rem 1rem 0;
+    vertical-align: middle;
+}
+.notlogin>img{
+    float:left;
+    margin-right:.5rem;
+}

@@ -41,3 +41,11 @@ $("form>input").focus(function(){
 		.next().html("");
 	}
 })
+$("button").click(function(){
+	var $email=$("#email")
+	var $puwd=$("$puwd")
+	if($email.val()==""){
+		$inp.addClass("input_red")
+		.next().html("这是必填项");
+	}
+})

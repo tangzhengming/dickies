@@ -1,5 +1,17 @@
  //引入头部
+/*class Zhuce {
+    constructor(name,email,pwd,phone,tpwd){
+        this.name = name;
+        this.email = email;
+        this.pwd = pwd;
+        this.phone = phone;
+        this.tpwd = tpwd;
+        this.state = "";
 
+        this.zname();
+        
+    }
+}*/
  $(function(){
      $('#header').load('./header.html');
      $('#footer').load('./weibu.html');
@@ -64,29 +76,27 @@ $("button").click(function(e){
     $(".input_gray>input").each(function(){
       if($(this).val()==""){
           $(this).addClass("input_red").next().html("这是必填项");
-      }else{
-          if(!$chebox){
-              $(".read>span").html("这是必填项");
-          }else{
+      }
               //$(this).removeClass().next().html("");
               //$(".read>span").html("");
-              var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
-              var semail=vail($("#semail"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
-              var puwd=vail($("#puwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
-              var spuwd=vail($("#spuwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
-              var phone=vail($("#phone"),/^1(3|4|5|7|8)\d{9}$/,"请输入有效的手机号码");
-        }
-      }
-    })
+        })
+     if(!$chebox){
+        $(".read>span").html("这是必填项");
+    }else{
+     var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
+     var semail=vail($("#semail"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
+     var puwd=vail($("#puwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
+     var spuwd=vail($("#spuwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
+     var phone=vail($("#phone"),/^1(3|4|5|7|8)\d{9}$/,"请输入有效的手机号码");
     if($("#email").val()==$("#semail").val()&&$("#puwd").val()==$("#spuwd").val()&&phone&&semail&&spuwd){
         //e.stopPropagation()
         ajax();
     }else{
         //e.stopPropagation()
         alert("信息填写有误,请核实注册信息");
-    }
+     }
+   }
 })
-
 
 function vail(txt,reg,html){
   if(!reg.test(txt.val())){
