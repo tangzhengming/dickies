@@ -26,7 +26,6 @@ for(var input of inputs){
 }*/
 //juqery操作  失去获得焦点事件
 $("form>input").focus(function(){
-	console.log($(".you>input"));
 	var $inp=$(this);
 	if(!$inp.hasClass("input_red"))
 	$inp.addClass("input_black");
@@ -41,11 +40,40 @@ $("form>input").focus(function(){
 		.next().html("");
 	}
 })
+//button点击登录事件
 $("button").click(function(){
-	var $email=$("#email")
-	var $puwd=$("$puwd")
-	if($email.val()==""){
-		$inp.addClass("input_red")
-		.next().html("这是必填项");
+	var $email=login($("#email"),"这是必填项");
+	var $puwd=login($("#puwd"),"这是必填项");
+	if($email&&$puwd){
+		ajax();
 	}
 })
+
+//登录事件函数
+ function login(tet,html){
+	 if(tet.val()==""){
+		 tet.addClass("input_red").next().html(html);
+		 return false;
+	 }else{
+		return true;
+	 }
+ }
+  function ajax(){
+	 var email=$("#email").val();
+	 var upwd=$("#puwd").val();
+	 $.ajax({
+		url:"http://127.0.0.1:3001/login",
+		type:"post",
+		data:{email,upwd},
+		success:function(res){
+			if(res!=""){
+				alert("登录成功")
+				$("input").val("")
+			}else{
+				$(".notlogin").css("display","block")
+			}
+		}
+	 })
+		 
+	 
+ }

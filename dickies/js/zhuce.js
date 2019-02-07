@@ -39,7 +39,7 @@
    }
  }*/
  //获得焦点失去焦点事件juqery
- $(":text").focus(function(){
+ $("input").focus(function(){
    var $inp=$(this);
    if(!$inp.hasClass("input_red"))
       $inp.addClass("input_black")
@@ -83,6 +83,7 @@ $("button").click(function(e){
      if(!$chebox){
         $(".read>span").html("这是必填项");
     }else{
+        $(".read>span").html("");
      var email=vail($("#email"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
      var semail=vail($("#semail"),/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,'电子邮件地址无效');
      var puwd=vail($("#puwd"),/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z_]{8,255}$/,"8~255位字符");
@@ -123,6 +124,7 @@ function vail(txt,reg,html){
         data:{uname,semail,spuwd,phone,sex},
         success: function(res) {
             alert(res);
+            $("input").val("");
         }
     })
 
