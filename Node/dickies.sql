@@ -11,3 +11,9 @@ CREATE TABLE usename(
     sex     BOOL,
     birthday DATE
 );
+CREATE TABLE shouye(
+    lid         TINYINT PRIMARY KEY AUTO_INCREMENT,
+    titleYear   VARCHAR(32),
+    title       VARCHAR(16),
+    img_url     VARCHAR(50)
+)

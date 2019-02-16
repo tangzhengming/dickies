@@ -180,6 +180,7 @@ div.xiala>div.hleft{
 .xiala>ul>li>a{
     color:#000;
     font-size:15px;
+    padding:0;
 }
 .xiala>ul>li>a:hover{
     text-decoration: underline;
