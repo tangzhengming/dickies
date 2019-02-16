@@ -45,6 +45,7 @@ $("button").click(function(){
 	var $puwd=login($("#puwd"),"这是必填项");
 	if($email&&$puwd){
 		ajax();
+
 	}
 })
 
@@ -76,3 +77,35 @@ $("button").click(function(){
 	 })
 	}
   })
+
+
+
+//登录事件函数
+ function login(tet,html){
+	 if(tet.val()==""){
+		 tet.addClass("input_red").next().html(html);
+		 return false;
+	 }else{
+		return true;
+	 }
+ }
+  function ajax(){
+	 var email=$("#email").val();
+	 var upwd=$("#puwd").val();
+	 $.ajax({
+		url:"http://127.0.0.1:3001/login",
+		type:"post",
+		data:{email,upwd},
+		success:function(res){
+			if(res!=""){
+				alert("登录成功")
+				$("input").val("")
+			}else{
+				$(".notlogin").css("display","block")
+			}
+		}
+	 })
+		 
+	 
+ }
+
