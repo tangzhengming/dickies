@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+}
+.hbody{
+    width:62%;
+    margin:0 auto;
+    padding:0 10px;
+}
+.hbody div:first-child{
+    margin:2.5rem 0 1.5rem 0;
+
+}
+.hbody div:first-child>a{
+    color:#333;
+    font-size:.75rem;
+}
+.hbody div:first-child>a:hover{
+   text-decoration: underline;
+}
+.hbody div:first-child>a:first-child::after{
+    content: "/";
+    display:inline-block;
+    margin-left:.4rem;
+}
