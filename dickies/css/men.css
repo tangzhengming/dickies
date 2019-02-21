@@ -7,7 +7,7 @@
     margin:0 auto;
     padding:0 10px;
 }
-.hbody div:first-child{
+.hbody>div:first-child{
     margin:2.5rem 0 1.5rem 0;
 
 }
@@ -15,11 +15,50 @@
     color:#333;
     font-size:.75rem;
 }
-.hbody div:first-child>a:hover{
+.hbody>div:first-child>a:hover{
    text-decoration: underline;
 }
-.hbody div:first-child>a:first-child::after{
+.hbody>div:first-child>a:first-child::after{
     content: "/";
     display:inline-block;
     margin-left:.4rem;
+}
+.left{
+    width:27%;
+    background:#f2f2f2;
+    margin-bottom:3rem;
+}
+.left>h1{
+    padding:1rem 0 1rem 0.99rem;
+    font-size:2.5rem;
+    font-weight: 500;
+}
+.left>.man{
+    padding:0 1rem;
+    margin-right:0;
+}
+.man-top{
+    margin-bottom:1.25rem;
+}
+.man-top>a>span{  
+    font-size:1rem;
+    color:#333;
+}
+.man-top::after{
+    content: "";
+    border-top:1px dashed #aaa;
+    border-bottom:1px dashed #aaa;
+    display:block;
+    margin:8px 0 7px;
+    height:2px;
+}
+.man-top>span:nth-child(2){
+    display:inline-block;
+    width:16px;
+    height:16px;
+    background-image:url("../img/sjicon.svg");
+    background-size:16px 16px;
+    float:right;
+    margin-right:.2rem;
+    transform:rotate(180deg)
 }
