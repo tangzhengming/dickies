@@ -1,6 +1,10 @@
 *{
     margin:0;
     padding:0;
+    font-family:source han sans,microsoft yahei,Helvetica,Arial,sans-serif;
+}
+html{
+    font-size:16px;
 }
 .hbody{
     width:62%;
@@ -23,6 +27,7 @@
     display:inline-block;
     margin-left:.4rem;
 }
+/*左边导航栏*/
 .left{
     width:27%;
     background:#f2f2f2;
@@ -33,10 +38,11 @@
     font-size:2.5rem;
     font-weight: 500;
 }
-.left>.man{
+.left>#man{
     padding:0 1rem;
     margin-right:0;
 }
+/*导航栏上半部分男装*/
 .man-top{
     margin-bottom:1.25rem;
 }
@@ -60,5 +66,22 @@
     background-size:16px 16px;
     float:right;
     margin-right:.2rem;
-    transform:rotate(180deg)
+    transform:rotate(0);
+}
+.men{
+    margin-bottom:1rem;
+    display:none;
+}
+.men>li{
+    padding:0  0  .6rem 2.3rem;
+}
+.men>li>a{
+    color:#333;
+    font-size:0.935rem;
+}
+.men-bottom{
+    padding: .5rem 0 2rem;
+}
+.men-bottom>h2{
+    padding-bottom:.7rem;
 }
