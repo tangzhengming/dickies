@@ -29,7 +29,7 @@ html{
 }
 /*左边导航栏*/
 .left{
-    width:27%;
+    width:23.7%;
     background:#f2f2f2;
     margin-bottom:3rem;
 }
@@ -47,7 +47,7 @@ html{
     margin-bottom:1.25rem;
 }
 .man-top>a>span{  
-    font-size:1rem;
+    font-size:0.935rem;
     color:#333;
 }
 .man-top::after{
@@ -75,7 +75,7 @@ html{
 .men>li{
     padding:0  0  .6rem 2.3rem;
 }
-.men>li>a{
+ul>li>a{
     color:#333;
     font-size:0.935rem;
 }
@@ -84,4 +84,43 @@ html{
 }
 .men-bottom>h2{
     padding-bottom:.7rem;
+}
+.color{
+    padding:0 2px 15px;
+    margin-bottom:30px;
+    display:none;
+}
+.color>li{
+    display:inline-block;
+    margin-right:20px;
+    padding-left:5px 
+}
+.size{
+    width:100%;
+    padding-left:5px;
+    margin-bottom:25px;
+}
+.size li{
+    display:inline-block;
+    width:22%;
+    line-height:1.875rem;
+    border:1px solid #d6d6d6;
+    box-sizing:border-box;
+    text-align: center;
+    background:#fff;
+    margin:8px 1px;
+}
+.price{
+    width:100%;
+    margin-bottom:25px;
+}
+.price li{
+    width:48%;
+    display:inline-block;
+    box-sizing:border-box;
+    text-align:center;
+    line-height:2.25rem;
+    border:1px solid #d6d6d6;
+    background:#fff;
+    margin:8px 1px;
 }
