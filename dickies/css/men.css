@@ -31,6 +31,7 @@ html{
 .left{
     width:23.7%;
     background:#f2f2f2;
+    float: left;
     margin-bottom:3rem;
 }
 .left>h1{
@@ -123,4 +124,50 @@ ul>li>a{
     border:1px solid #d6d6d6;
     background:#fff;
     margin:8px 1px;
+}
+.word li{
+    width:48%;
+    display:inline-block;
+    border:1px solid #d6d6d6;
+    box-sizing:border-box;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align:center;
+    line-height: 2.25rem;
+    background-color:#fff;
+}
+.right{
+    width:74.6%;
+    float:right;
+}
+.right>h1{
+    font-size:26px;
+    margin:18px 0;
+    line-height: 39px;
+}
+#sort{
+    width:18.8%;
+    height:1.875rem;
+    border:1px solid #aaaaaa;
+    border-radius: 4px;
+    text-indent: .2rem;
+    background-image: url("../img/sjicon.svg");
+    background-position:95% center;
+    background-size:16px 16px;
+    background-repeat: no-repeat;
+    -webkit-appearance:none;
+}
+#show{
+    width:12.5%;
+    height:1.875rem;
+    border:1px solid #aaaaaa;
+    border-radius:4px;
+    text-indent: .2rem;
+    margin-left:2rem;
+    background-image: url("../img/sjicon.svg");
+    background-position:95% center;
+    background-size:16px 16px;
+    background-repeat: no-repeat;
+    -webkit-appearance:none;
 }

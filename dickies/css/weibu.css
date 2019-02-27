@@ -12,6 +12,7 @@ border-top:1px solid #ccc;
 margin-top:60px;
 background-color:#efefef;
 position:relative;
+clear: both;
 }
 .logo img{
 width:130px;
