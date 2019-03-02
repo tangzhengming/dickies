@@ -7,7 +7,7 @@ html{
     font-size:16px;
 }
 .hbody{
-    width:62%;
+    width:65%;
     margin:0 auto;
     padding:0 10px;
 }
@@ -170,4 +170,44 @@ ul>li>a{
     background-size:16px 16px;
     background-repeat: no-repeat;
     -webkit-appearance:none;
+}
+.page{
+    width:58%;
+    float:right;
+    display:inline-block;
+}
+.page svg{
+    vertical-align: middle;
+}
+.page span{
+    color:#666;
+    margin-left:2.5rem;
+    font-size: .875rem;
+}
+.list{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left:2.2rem;
+}
+.list>li{
+    float: left;
+    width:30px;
+    line-height: 30px;
+    text-align: center;
+}
+.list>li:first-child a,.list>li:last-child a{
+    padding:0;
+}
+.list>li>a{
+    padding:5px 10px;
+    border-radius: 4px;
+}
+.list>li:first-child,.list>li:last-child{
+    background:#e5e5e5;
+    margin:0 7px;
+}
+.background{
+    background: #444444;
+    color:#fff;
 }

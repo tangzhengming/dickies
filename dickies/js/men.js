@@ -18,5 +18,11 @@ $(function(){
           .parent().next().css("display","none");
         }
     })
-    
+   
+    $("ul.list>li>a").click(function(){
+       var $back=$(this);
+       $back.addClass("background").parent().siblings().children().removeClass();
+       
+
+    })
 })
