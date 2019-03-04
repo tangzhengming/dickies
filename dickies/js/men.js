@@ -25,4 +25,28 @@ $(function(){
        
 
     })
+    //向后跳页按钮
+   $("ul.list>li:last-child").on("click",function(){
+       var list=$("ul.list>li>a[data-list]");
+       var num=$(".background").attr("data-list");
+       $(list).removeClass();
+          if(num<list.length-1){
+              num++;
+            }else{
+              num=0;
+            }
+       $(list[num]).addClass("background");
+   })
+   $("ul.list>li:first-child").on("click",function(){
+    var list=$("ul.list>li>a[data-list]");
+    var num=$(".background").attr("data-list");
+    $(list).removeClass();
+       if(num==0){
+          num=0;
+         }else{
+           num--;
+         }
+    $(list[num]).addClass("background");
+})
+
 })
