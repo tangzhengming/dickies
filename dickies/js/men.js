@@ -41,6 +41,7 @@ $(function(){
             }
        $(list[num]).addClass("background");
    })
+    //向前页跳转
    $("ul.list>li:first-child").on("click",function(){
     var list=$("ul.list>li>a[data-list]");
     var num=$(".background").attr("data-list");
