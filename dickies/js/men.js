@@ -73,12 +73,11 @@ $(function(){
   //图片跳转点击鼠标移入点击事件
   $("#details>li").each(function(){
     var $onList=$(this).children(".last-item").find(".active").parents().eq(1).index()//设置默认值
-    console.log($onList)
     //var $small=$(this).children().last().children().first().children().children().children(".small");
-    var $small=$(this).find(".small")//获取到颜色图片
+    var $small=$(this).find(".small")                                               //获取到颜色图片
     //$big_img=$small.parents().eq(4).children(".first-item").find(".item");//找到每一个大图片
-    var $big_img=$(this).children(".first-item").find(".item")
-    $($big_img[$onList]).addClass("active")
+    var $big_img=$(this).children(".first-item").find(".item")                       //获取所有的大图片
+    $($big_img[$onList]).addClass("active")                                          //给默认值的图片显示
     $small.on("mouseenter",function(){
       $small=$(this)
         $list=$small.parents().eq(1).index();//找当鼠标当前移入的小图片的下标值
@@ -93,9 +92,84 @@ $(function(){
       var $small=$(this)
       $small.parents().eq(2).find(".item").removeClass("active")//清除之前的勾选图片
       $small.prev().addClass("active");//显示出勾选图片
-       $list=$small.index()
+       $list=$small.parents().eq(1).index();
       //$small.parent().parent().siblings().children().children(".item").removeClass("active"); //先寻找点击图片在通过关系找到相对于兄弟下子元素下的勾选图片清除掉
       $onList=$list  //把自定义的值赋值给onlist
     })
   })
 })
+
+$(function(){
+  var pno=0;
+  var pageSize=0;
+  $.ajax({
+    url:"http://127.0.0.1:3001/details",
+    type:"get",
+    data:{ pno,pageSize },
+    dataType:"JSON",
+    success:function(res){
+      var html="";
+      var arr=[];
+      console.log(res);
+      for(var i=0;i<res.length;i++){ 
+        console.log(res[i].small_url)
+      var small=res[i].small_url.split(",");
+      //console.log(small)
+      
+      arr.push(small)
+      //console.log(arr);
+      html+=`<li>
+      <div class="first-item">`
+        for(var a=0;a<arr.length;a++){
+          //for(var j=0;j<arr)
+            html+=`<a href='javascript:;' class='item active'>"+
+               "<img src='${arr[i]}'>"+
+            "</a>`
+          }
+          //console.log(arr.length)
+     /*</div>
+      <div class="last-item">
+          <ul>
+              <li>
+                  <a href="javascript:;">
+                      <div class="item active"></div>
+                      <img src="img/color/NV.jpg" class="small"  >
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:;">
+                      <div class="item"></div>
+                      <img src="img/color/GY.jpg" class="small" >
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:;">
+                      <div class="item"></div>
+                      <img src="img/color/BK.jpg" class="small">
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:;">
+                      <div class="item"></div>
+                      <img src="img/color/GR.jpg" class="small">
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:;">
+                      <div class="item"></div>
+                      <img src="img/color/WH.jpg" class="small" data-list="4">
+                  </a>
+              </li>
+          </ul>
+          <div class="title"><a href="">${res[i].title}</a></div>
+          <div class="subhead"><span>${res[i].id}</span>
+          <div class="nexthead"><span>¥${res[i].price}</span></div></div>
+      </div>
+  </li>*/
+       }
+    }
+  })
+})
+
+
+  

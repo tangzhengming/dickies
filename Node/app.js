@@ -3,6 +3,7 @@ const bodyParser=require("body-parser");
 const user=require('./router/user.js');
 const login=require('./router/login.js');
 const shouye=require('./router/shouye.js');
+const details=require('./router/details.js');
 //创建web服务器
 var server=express();
 server.listen(3001,function(){
@@ -18,4 +19,5 @@ server.use(bodyParser.urlencoded({
 server.use('/zhuce',user);
 server.use('/login',login);
 server.use('/shouye',shouye);
+server.use('/details',details);
 //127.0.0.1:3000/zhuce

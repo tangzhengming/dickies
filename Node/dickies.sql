@@ -20,15 +20,15 @@ CREATE TABLE main(
 CREATE TABLE details(
     uid  TINYINT PRIMARY KEY AUTO_INCREMENT,     
     id   VARCHAR(16),
-    title VARCHAR(32),
-    subtitle VARCHAR(32),
+    title VARCHAR(100),
+    subtitle VARCHAR(60),
     price     DECIMAL(6,2),
-    small_url VARCHAR(120),
+    small_url VARCHAR(1000),
     size      VARCHAR(48),
-    backimg   VARCHAR(32),
+    backimg   VARCHAR(200),
     detail    VARCHAR(60),
-    texture   VARCHAR(16),
-    big_url   VARCHAR(300)
+    texture   VARCHAR(60),
+    big_url   VARCHAR(100000)
 )
 
 INSERT INTO shouye VALUES(NULL,"2019 SPRING","春季上新","http://127.0.0.1:3001/img/spring.jpg");
