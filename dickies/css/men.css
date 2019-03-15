@@ -200,7 +200,7 @@ html{
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
-    margin-left:2.2rem;
+    margin-left:2.1rem;
 }
 .list>li{
     float: left;
@@ -232,6 +232,7 @@ html{
 #details>li{
     width:26.3%;
     padding:30px 22px 22px;
+    margin-bottom:1.5rem;
 }
 #details>li>div:first-child{
     position: relative;
@@ -305,4 +306,7 @@ html{
     background:#fff;
     color:#003767 !important;
     border:2px solid #003767;
+}
+.details{
+    padding-bottom:2rem;
 }

@@ -16,7 +16,7 @@ CREATE TABLE main(
     titleYear   VARCHAR(32),
     title       VARCHAR(16),
     img_url     VARCHAR(50)
-)
+);
 CREATE TABLE details(
     uid  TINYINT PRIMARY KEY AUTO_INCREMENT,     
     id   VARCHAR(16),
@@ -29,9 +29,9 @@ CREATE TABLE details(
     detail    VARCHAR(60),
     texture   VARCHAR(60),
     big_url   VARCHAR(100000)
-)
+);
 
-INSERT INTO shouye VALUES(NULL,"2019 SPRING","春季上新","http://127.0.0.1:3001/img/spring.jpg");
+INSERT INTO main VALUES(NULL,"2019 SPRING","春季上新","http://127.0.0.1:3001/img/spring.jpg");
 
 
 INSERT INTO details VALUES(NULL,"DK006083",'Dickies中性纯色短袖T恤','品牌小标 螺纹圆领',199.00,'http://127.0.0.1:3001/img/color/NV.jpg,http://127.0.0.1:3001/img/color/GY.jpg,http://127.0.0.1:3001/img/color/BK.jpg,http://127.0.0.1:3001/img/color/GR.jpg,http://127.0.0.1:3001/img/color/WH.jpg','XS,S,M,L,XL','http://127.0.0.1:3001/img/DK006083/DK006083-1_DS.jpg','Dickies logo小标,螺纹圆领,纯棉面料','棉100%','http://127.0.0.1:3001/img/DK006083/DK006083-CT9-1.jpg&http://127.0.0.1:3001/img/DK006083/DK006083-CT9-2.jpg&http://127.0.0.1:3001/img/DK006083/DK006083-CT9-3.jpg,http://127.0.0.1:3001/img/DK006083/DK006083-CL8-1.jpg&
