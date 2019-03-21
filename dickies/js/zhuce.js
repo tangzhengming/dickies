@@ -37,7 +37,7 @@
    }
  }*/
  //获得焦点失去焦点事件juqery
- $("input").focus(function(){
+ $(".input_gray>input").focus(function(){
    var $inp=$(this);
    if(!$inp.hasClass("input_red"))
       $inp.addClass("input_black")
@@ -112,17 +112,18 @@ function vail(txt,reg,html){
 }
    function ajax(){
      var uname=$("#uname").val()
-     var semail=$("#semail").val()
-     var spuwd=$("#spuwd").val()
+     var email=$("#semail").val()
+     var puwd=$("#spuwd").val()
      var phone=$("#phone").val()
      var sex=$("#sex>label>input:checked").val()
     $.ajax({
         url:"http://127.0.0.1:3001/zhuce",
         type:"post",
-        data:{uname,semail,spuwd,phone,sex},
+        data:{uname,email,puwd,phone,sex},
         success: function(res) {
             alert(res);
             $("input").val("");
+            $(".read>input:checkbox").attr("checked",false)
         }
     })
 

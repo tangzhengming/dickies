@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-family:source han sans,microsoft yahei,Helvetica,Arial,serif;
+}
+#detail{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 10px;
+}
+a{
+    color:#444;
+}
+#detail::after{
+    content:"";
+    clear:both;
+    display:block;
+}
+#detail>div:first-child{
+    font-size:.75rem;
+    line-height:18px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+.left{
+    width:55%;
+    float:left;
+}
+#detail>div:first-child>a:first-child::after{
+    content:"/";
+    display: inline-block;
+    margin-left:.4rem;
+}
+#detail>div:first-child>a:hover{
+    text-decoration: underline;
+}
+.details::after{
+    content:"";
+    clear:both;
+    display:block;
+}
+
+.big_img{
+    width:519px;
+    height:665px;
+}
+.small_img{
+    width:77px;
+    height:100px;
+    margin:0 0 10px 1px;
+    border:1px solid #ddd;
+    border-radius:4px
+}
+.border{
+   border-width:2px;
+   border-color:#444;
+   margin-left:0;
+}
+.right{
+    float:right;
+    width:45%;
+}
+.product-name{
+    font-size:18.5px;
+    font-weight: 400;
+    margin-top:20px;
+    line-height: 18px;
+}
+.product-id{
+    font-size:18.5px;
+    font-weight: 400;
+    margin:5px 0;
+    line-height: 27px;
+}
+.product-subtitle{
+    font-size:17px;
+    color:#6c6c6c;
+    margin-top:5px;
+    line-height: 27px;
+}
+.color_img>a{
+    float:left;
+    width:100%;
+    height:100%;
+}
+.product-price{
+    font-size:30px;
+    font-weight: 550;
+    font-family:Arial,sans-serif;
+    letter-spacing:-.15rem;
+    line-height: 45px;
+    margin-top:1rem;
+    margin-bottom:.2rem;
+}
+.color{
+    margin:10px 0;
+}
+.color span{
+    display: inline-block;
+    font-size:1rem;
+    font-weight:800;
+    margin-bottom:6px;
+}
+.color ul>li{
+    display: inline-block;
+    margin:0 .5rem .5rem 0;
+    position:relative;
+}
+.color ul>li>a>div{
+    width:20px;
+    height:20px;
+    background-image: url("../img/true.jpg");
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    position:absolute;
+    top:5px;
+    left:5px;
+}
+.size span{
+    display: inline-block;
+    font-size:1rem;
+    font-weight:800;
+    margin-bottom:6px;
+}
+.size ul::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.available{
+    float:left;
+    margin:0 10px 10px 0;
+}
+.available>a{
+    line-height: 22px;
+    border:1px solid #aaa;
+    color:#666;
+    padding:0 .15rem;
+    border-radius:5px;
+}
+.sizedetails{
+    clear: both;
+    margin:10px 0 20px;
+}
+.sizedetails a::before{
+    content:"";
+    width:32px;
+    height:15px;
+    float: left;
+    background-image: url("../img/icons.svg");
+    background-position: 75.7983193277311% 77.68166089965398%;
+    margin:4px 10px 0 5px;
+}
+.num{
+    height:40px;
+    width:100%;
+}
+.num>span{
+    font-size: 1rem;
+    font-weight: 900;
+    float:left;
+    margin:10px 7px 0 0;
+}
+.num>div{
+    float:left;
+    margin:10px 7px 0 0;
+    display: flex;
+}
+.num button{
+    width:20px;
+    height:20px;
+    border:none;
+    line-height:19px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    font-size:15px;
+    border-radius:3px;
+    cursor: pointer;
+}
+.num input{
+    height:18px;
+    width:30px;
+    border:1px solid #333;
+    border-radius:5px;
+    text-align: center;
+}
+.button{
+    position:relative;
+    width:400px;
+    height: 40px;
+    display: flex;
+}
+.button span{
+    position: absolute;
+    width:180px;
+    text-align: center;
+    padding:3px 8px;
+    font-size: 18px;
+    color:#fff;
+    background:#444;
+    top:-40px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    display:none;
+}
+.button button{
+    display: inline-block;
+    width:50%;
+    height:100%;
+    border:none;
+    color:#fff;
+    font-size:20px;
+    font-weight: 700;
+    letter-spacing:5px;
+    cursor: pointer;
+}
+#add{
+    background:#cc0025;
+}
+#buy{
+    background:#000;
+}
+.share{
+    width:400px;
+}
+.share::before{
+    content:"";
+    border-top:1px dashed #aaa;
+    border-bottom:1px dashed #aaa;
+    display:block;
+    height:2px;
+    margin:20px 0 15px;
+}
+.share span{
+    font-size:0.975rem;
+    color:#444;
+    float:left;
+}
+.share a{
+    float:left;
+    margin:0 9.5px;
+}
+.share img{
+    width:30px;
+    height:30px;
+}
+.image h2{
+    width:700px;
+    font-size:35px;
+    margin:30px auto;
+    text-align: center;
+    font-weight: 500;
+    line-height:53px;
+    position:relative;
+}
+.image .xuleft::before{
+    width:35%;
+    height:2px;
+    content:"";
+    border-top:1px dashed #aaa;
+    border-bottom:1px dashed #aaa;
+    display:block;
+    position:absolute;
+    top:50%;
+    left:0;
+}
+.image .xuright::after{
+    width:35%;
+    height:2px;
+    content:"";
+    border-top:1px dashed #aaa;
+    border-bottom:1px dashed #aaa;
+    display:block;
+    position:absolute;
+    top:50%;
+    right:0;
+}
+.beijing img{
+    display: block;
+    margin:0 auto;
+}
+.deta{
+    margin:0 140px;
+    padding-bottom: 70px;
+}
+.deta h1{
+    margin-top:30px;
+    font-size:18px;
+}
+.deta li{
+    font-size:18px;
+    padding:2px 18px 2px;
+    position:relative;
+}
+.deta li::before{
+    content: "";
+    width:5px;
+    height:5px;
+    border-radius:5px;
+    display: block;
+    border:1px solid #000;
+    background:#000;
+    position:absolute;
+    left:0;
+    top:10px;
+}
+.item{
+    display:none;
+}
+.item.active{
+    display:flex;
+}
+.item.show{
+    display:block;
+}

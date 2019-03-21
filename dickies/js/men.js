@@ -162,7 +162,7 @@ function ajax(pno,pageSize){
               var $small=$(this)
               $small.parents().eq(2).find(".item").removeClass("active")//清除之前的勾选图片
               $small.prev().addClass("active");//显示出勾选图片
-               $list=$small.parents().eq(1).index();
+              $list=$small.parents().eq(1).index();
               //$small.parent().parent().siblings().children().children(".item").removeClass("active"); //先寻找点击图片在通过关系找到相对于兄弟下子元素下的勾选图片清除掉
               $onList=$list  //把自定义的值赋值给onlist
             })

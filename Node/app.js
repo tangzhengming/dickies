@@ -4,11 +4,20 @@ const user=require('./router/user.js');
 const login=require('./router/login.js');
 const shouye=require('./router/shouye.js');
 const details=require('./router/details.js');
+const session=require("express-session");
 //创建web服务器
 var server=express();
 server.listen(3001,function(){
     console.log("开启")
 });
+server.use(session({
+    secret:"128位随机字符串",
+    resave:false,
+    saveUninitialized:true,
+    cookie:{
+        maxAge:1000*60*60
+    }
+}))
 //托管静态资源
 server.use(express.static("../dickies"));
 //使用body-parser中间件将post请求数据解析为对象
