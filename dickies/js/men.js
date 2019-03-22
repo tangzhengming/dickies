@@ -29,10 +29,8 @@ $(function(){
 $(function(){
   var pno=0;
   var pageSize=12;
-  var ul1=$("ul.list")[0];
-  var ul2=$("ul.list")[1];
-  var list1=$(ul1).find("a");
-  var list2=$(ul2).find("a");
+  var list1=$("ul.list").eq(0).find("a");
+  var list2=$("ul.list").eq(1).find("a");
   var remove=function(){
     $(list1).removeClass("background");
     $(list2).removeClass("background");

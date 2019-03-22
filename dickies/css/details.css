@@ -132,6 +132,14 @@ a{
     float:left;
     margin:0 10px 10px 0;
 }
+.background{
+    background-color:#333;
+    color:#fff !important;
+}
+.back{
+    background-color:#333;
+    color:#fff !important;
+}
 .available>a{
     line-height: 22px;
     border:1px solid #aaa;
@@ -314,4 +322,7 @@ a{
 }
 .item.show{
     display:block;
+}
+.sizedetails a:hover{
+    text-decoration: underline;
 }
