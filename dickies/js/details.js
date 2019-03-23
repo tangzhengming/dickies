@@ -80,7 +80,7 @@ $(function(){
     $(".available").on("click",function(){
         if($(this).children().hasClass("back")){
             $(this).children().removeClass("back")
-            //$(this).siblings().children().removeClass("background");
+            $(this).siblings().children().removeClass("background");
             $(".size>span").first().html("选择 尺码")
             $(".size>span").last().html("");
             index="";
@@ -95,6 +95,35 @@ $(function(){
         }
     })
 })
-
-
+$(function(){
+	var value=$("#value").val()
+	$("#addBtn").on("click",function(){
+		console.log(value)
+		if(value<15){
+			value++;
+			$("#value").val(value);
+		}
+	})
+	$("#minusBtn").on("click",function(){
+		console.log(value)
+		if(value>1){
+			value--;
+			$("#value").val(value);
+		}
+	})
+})
+$(function(){
+	$("#add").on("click",function(){
+		var size=$(".available>a").hasClass("back background");
+		var color=$(".color_img div").hasClass("item show");
+		if(size&&color){
+			console.log(1)
+		}else{
+			$(".button>span").show();
+			setTimeout(function(){
+				$(".button>span").hide();
+			},2000)
+		}
+	})
+})
 

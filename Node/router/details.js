@@ -18,4 +18,10 @@ router.get("/",(req,res)=>{
         res.end();
     })
 })
+router.get("/index",(req,res)=>{
+	res.writeHead(200,{
+        "Access-Control-Allow-Origin":"*"
+        });
+    
+})
 module.exports=router;

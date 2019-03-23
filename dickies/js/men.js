@@ -94,16 +94,14 @@ function ajax(pno,pageSize){
       <div class="first-item">`
         for(var a=0;a<big.length;a++){
           var bigImg=big[a].split("&");
-           if(a==0){html+=`<a href='javascript:;' class='item active'>
+           if(a==0){html+=`<a href='details.html' class='item active'>
                <img src=${bigImg[0]}>
-            </a>
-            <a href="javascript:;" class="browse">快速浏览</a>`}
-            else{html+=`<a href='javascript:;' class='item'>
+            </a>`}
+            else{html+=`<a href='http:127.0.0.1:3001/details.html' class='item'>   //我想在这里传递个参数 传递下面的onlist  143行
             <img src=${bigImg[0]}>
-         </a>
-         <a href="javascript:;" class="browse">快速浏览</a>`}
+         </a>`}
           }
-     html+=`</div>
+     html+=`<a href="javascript:;" class="browse">快速浏览</a></div>
       <div class="last-item">
           <ul>`
             for(var i=0; i<small.length;i++){
