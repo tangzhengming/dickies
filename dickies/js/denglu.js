@@ -71,7 +71,7 @@ $("button").click(function(){
 				$("input").val("")
 				$(".notlogin").css("display","none");
 				var uname=res[0].uname;
-				document.cookie=uname;
+				document.cookie="uname="+uname;
 			}else{
 				$(".notlogin").css("display","block")
 			}

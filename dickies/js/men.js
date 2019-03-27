@@ -94,10 +94,10 @@ function ajax(pno,pageSize){
       <div class="first-item">`
         for(var a=0;a<big.length;a++){
           var bigImg=big[a].split("&");
-           if(a==0){html+=`<a href='details.html' class='item active'>
+           if(a==0){html+=`<a href='javascript:void(0)' class='item active' data-uid=${list.uid}>
                <img src=${bigImg[0]}>
             </a>`}
-            else{html+=`<a href='http:127.0.0.1:3001/details.html' class='item'>   //我想在这里传递个参数 传递下面的onlist  143行
+            else{html+=`<a href='javascript:void(0)' class='item' data-uid=${list.uid}>  
             <img src=${bigImg[0]}>
          </a>`}
           }
@@ -137,7 +137,7 @@ function ajax(pno,pageSize){
             $(this).children(".browse").css("display","none")
           })
           //图片跳转点击鼠标移入点击事件
-          $("#details>li").each(function(){
+           $("#details>li").each(function(){
             var $onList=$(this).children(".last-item").find(".active").parents().eq(1).index()//设置默认值
             //var $small=$(this).children().last().children().first().children().children().children(".small");
             var $small=$(this).find(".small")                                               //获取到颜色图片
@@ -161,14 +161,25 @@ function ajax(pno,pageSize){
               $list=$small.parents().eq(1).index();
               //$small.parent().parent().siblings().children().children(".item").removeClass("active"); //先寻找点击图片在通过关系找到相对于兄弟下子元素下的勾选图片清除掉
               $onList=$list  //把自定义的值赋值给onlist
-            })
+            }) 
+            var $jump=$(this).children(".first-item").find(".item");
+            $jump.on("click",function(){
+              //console.log($(this).attr("data-uid"));
+              var uid = $(this).attr("data-uid");
+              for(var Item of res){
+              if(uid == Item.uid){
+                  var url="http://127.0.0.1:3001/details.html?id="+Item.id+"&uid="+$onList;
+                  window.location.href = url 
+                }
+              }
+            })     
           })
         })
-        }
-       }
+      }
     }
-  )
-}
+  }
+)}
+
 
 
 

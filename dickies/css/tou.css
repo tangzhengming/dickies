@@ -36,6 +36,7 @@ left:1px;
 }
 .ul_shang li a{
 color:#fff;
+font-size:13px;
 }
 .head_xia{
 height:120px;
@@ -218,4 +219,10 @@ li:nth-child(7) div.xiala .hright{
     color:#000 !important;
     text-decoration: underline;
     transition:all .1s linear;
+}
+.exam{
+    display: none;
+}
+.exam.active{
+    display: block;
 }

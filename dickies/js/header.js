@@ -26,3 +26,14 @@ $("ul.one>li").hover(function(){
     $a.removeClass()
     .next().css("display","none");
 })
+
+$(function(){
+    var uname=document.cookie.split("=")[1];
+    if(!uname==""){
+        $(".exam").removeClass("active");
+        $(".exam").first().addClass("active");
+    }else{
+        $(".exam").addClass("active");
+        $(".exam").first().removeClass("active");
+    }
+})

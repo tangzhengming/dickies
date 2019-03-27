@@ -18,7 +18,3 @@ $(function(){
     }
   })
 })
-document.cookie=""+"";
-if(document.cookie==""){
-    console.log(111)
-}

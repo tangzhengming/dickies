@@ -22,6 +22,12 @@ router.get("/index",(req,res)=>{
 	res.writeHead(200,{
         "Access-Control-Allow-Origin":"*"
         });
-    
+    var id=req.query.id;
+    var sql="SELECT * FROM details WHERE id=?"
+    pool.query(sql,[id],(err,result)=>{
+        if(err) throw err;
+        res.write(JSON.stringify(result));
+        res.end();
+    })
 })
 module.exports=router;

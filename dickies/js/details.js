@@ -2,7 +2,151 @@ $(function(){
     $('#header').load('./header.html');
 	$('#footer').load('./weibu.html');
 });
-//点击小图片显示大图片
+$(function(){
+    var url=window.location.search.split("=");
+    var id=url[1].slice(0,8);
+    var show=url[2];
+    $.ajax({
+        url:"http://127.0.0.1:3001/details/index",
+        type:"get",
+        data:{id},
+        dataType:"JSON",
+        success: function(res) {
+            var result=res[0]
+            console.log(result)
+            var html1='';
+            var html2='';
+            var small=result.small_url.split(",");
+            var big=result.big_url.split(",");
+            var size=result.size.split(",");
+            var color=result.color.split(",");
+            var detail=result.detail.split(",");
+            html1+=`<div class="left">
+            <ul>`
+            for(var i=0;i<big.length;i++){
+               html1+= `<li class="item">
+                    <a href="javascript:;">
+                        <img src="" class="big_img">
+                        <img src="" alt="">
+                    </a>   
+                    <ul class="small">`
+                    var bigimg=big[i].split("&");
+                    for(var a=0;a<bigimg.length;a++){
+                        if(a==0) {html1+= `<li>
+                            <a href="javascript:;">
+                                <img src="${bigimg[a]}" class="small_img  border" data-img="${bigimg[a]}">
+                            </a>
+                        </li>`}else{
+                            html1+= `<li>
+                            <a href="javascript:;">
+                                <img src="${bigimg[a]}" class="small_img " data-img="${bigimg[a]}">
+                            </a>
+                        </li>`
+                        }
+                    }  
+                    html1+= `</ul>
+                </li>
+                 `}
+
+            html1+=`</ul>
+           </div> 
+           <div class="right">
+               <div class="title">
+                <h1 class="product-name">${result.title}</h1>
+                <h1 class="product-id">${result.id}</h1>
+                <p class="product-subtitle">${result.subtitle}</p>
+               </div>  
+               <div class="product-price">
+                <span>¥${result.price.toFixed(2)}</span>
+               </div>
+               <ul>
+                <li class="color">
+                    <span>已选择 颜色:</span>
+                    <span></span>`
+                    html1+=`<ul>`
+                      for(var index=0;index<small.length;index++){
+                        if(index==show){
+                        html1+= `<li class="color_img">`
+                        var bigImg=big[index].split("&");
+                        //console.log(bigImg[0]);
+                        html1+=  `<a href="javascript:;"  data-limg="${bigImg[0]}">`
+                        
+                        html1+=   `<div class="item show"></div>
+                                <img src="${small[index]}" title="${color[index]}">
+                            </a>
+                        </li>`}else{
+                            html1+= `<li class="color_img">`
+                             var bigImg=big[index].split("&");
+                             //console.log(bigImg[0]);
+                             html1+=  `<a href="javascript:;"  data-limg="${bigImg[0]}">`
+                             
+                             html1+=   `<div class="item"></div>
+                                     <img src="${small[index]}" title="${color[index]}">
+                                 </a>
+                             </li>`
+                        }
+                    }   
+                   html1+=`</ul>
+                </li>
+                <li class="size">
+                    <span>选择 尺码</span>
+                    <span></span>
+                    <ul>`
+                    for(var j=0;j<size.length;j++){
+                        html1+= ` <li class="available"><a href="javascript:;" title="${size[j]}">${size[j]}</a></li>`
+                    }
+                  html1+= `</ul>
+                </li>
+               </ul> 
+               <div class="sizedetails">
+                    <a href="javascript:;">尺码详情</a>
+               </div>
+               <div>
+                    <div class="num">
+                        <span>数量</span>
+                        <div>
+                            <button id="minusBtn">-</button>
+                            <input type="text" value="1" id="value">
+                            <button id="addBtn">+</button>
+                        </div>
+                    </div>
+                    <div class="button">
+                            <span>请选择 颜色 和 尺码</span>
+                            <button id="add">加入购物车</button>
+                            <button id="buy">立即购买</button>
+                    </div>
+                    <div class="share">
+                        <span>分享:</span>
+                        <a href="javascript:;"><img src="./img/tencent-weibo.svg" ></a>
+                        <a href="javascript:;"><img src="./img/weixin.svg"></a>
+                        <a href="javascript:;"><img src="./img/weibo.svg"></a>
+                        <a href="javascript:;"><img src="./img/douban.svg"></a>
+                    </div>
+               </div>
+           </div>`
+           html2+=` <h2>
+                <span class="xuleft"></span>
+                <span>产品详情</span>
+                <span class="xuright"></span>
+                </h2>
+             </div>
+           <div class="beijing">
+                        <img src="${result.backimg}" alt="">
+                    </div>
+                    <div class="deta">
+                        <h1>商品细节</h1>`
+                        for(var k=0;k<detail.length;k++){
+                        html2+= `<li>${detail[k]}</li>`
+                        }
+                       html2+= `<h1>材质说明</h1>
+                        <li>${result.texture}</li>
+                        <h1>价格说明</h1>
+                        <li>划线价格：划线的价格可能是商品的专柜吊牌价或正品零售价指导价或该商品的曾经展示过的销售价等，仅供您参考</li>
+                        <li>未划线价格：未划线的价格是商品在官网上的销售标价，具体的成交价格可能因会员使用优惠券发生变化，最终以订单结算页价格为准</li>
+                    </div>`
+           $(".details").html(html1);
+           $(".image").html(html2);
+           //点击小图片显示大图片
 $(function(){
     //点击小图片切换大图片
     $(".small").each(function(){
@@ -18,6 +162,7 @@ $(function(){
     var  onsrc=$(".color_img").find(".item.show").parent().attr("data-limg");
     var  list=$(".color_img").find(".item.show").parents().eq(1).index();
     //$(".item").removeClass("active");
+    $(".big_img").attr("src",onsrc);
     $(".item").eq(list).addClass("active");
     $(".color_img").on("click",function(){
         list=$(this).index();
@@ -123,7 +268,9 @@ $(function(){
 			setTimeout(function(){
 				$(".button>span").hide();
 			},2000)
-		}
-	})
+		            }
+	            })
+            })
+        }
+    })
 })
-
