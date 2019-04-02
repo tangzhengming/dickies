@@ -454,3 +454,7 @@ form{
     float:left;
     margin-right:.5rem;
 }
+.menu-button>img{
+    width:22px;
+    height:22px;
+}

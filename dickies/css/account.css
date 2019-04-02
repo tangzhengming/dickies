@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+.body{
+    max-width: 1180px;
+    margin:0 auto;
+    padding:0 10px;
+}
+.body::after{
+    content:"";
+    clear: both;
+    display: block;
+}
+.title{
+    margin-top:15px;
+    padding:11px 0 22px 0;
+}
+.title>a{
+    font-size:.75rem;
+    color:#333;
+}
+.title>a:first-child::after{
+    content: "/";
+    margin-left:.2rem;
+}
+.title>a:hover{
+    text-decoration: underline;
+}
+.left{
+    width:17%;
+    background:#f2f2f2;
+    border:1px solid #fff;
+    border-radius:4px;
+    float: left;
+}
+.left a{
+    color:#333;
+}
+.left>div:first-child{
+    margin:0 13px;
+}
+.toggle{
+    font-size:16px;
+    font-weight: 600;
+    margin:12.45px;
+    padding-top:3px;
+    display: block;
+}
+.toggle::after{
+    content:"";
+    border-top:1px dashed #aaa;
+    border-bottom:1px dashed #aaa;
+    display:block;
+    height:2px;
+    margin:8px 0 7px;
+}
+.left_shang ul{
+    margin:8.7px 0;
+    padding:3px 0 10px;
+    display:block;
+}
+.left_shang ul>li{
+    margin-bottom:.3rem;
+    line-height:24px;
+}
+.left_shang ul>li>a{
+    display:block;
+    margin-left:13px;
+    font-size:15px;
+}
+.left_shang ul>li>a:hover{
+    text-decoration: underline;
+}
+.left_xia{
+    margin:0 0 19.95px 21px;
+}
+.title2{
+    font-size:16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+.left_xia>p{
+    margin:0 0 20px;
+    padding-right:15px;
+    font-size:15px;
+    line-height:1.5rem;
+} 
+.left_xia>p>a,.menu-button>a{
+    text-decoration: underline;
+}
+.left_xia>p>a:hover,.menu-button>a:hover{
+    text-decoration: none;
+}
+.menu-button>img{
+    width:22px;
+    height:22px;
+}

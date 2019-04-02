@@ -31,7 +31,9 @@ color:#fff;
 
 .ul_shang li img{
 position:relative;
-top:5px;
+width:18px;
+height:18px;
+top:3px;
 left:1px;
 }
 .ul_shang li a{
