@@ -12,7 +12,6 @@ router.post('/',(req,res)=>{
         if(err) throw err;
         var uid=result[0].uid
         req.session.uid=uid;
-        console.log(req.session.uid)
         res.write(JSON.stringify(result));
         res.end();
     })

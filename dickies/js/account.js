@@ -12,3 +12,12 @@ $(function(){
         }
     })
 })
+$(function(){
+    var uname=document.cookie.split("=")[1]
+    console.log(uname);
+    $(".around").html(uname);
+    $("#quit").on("click",function(){
+        document.cookie="uname="+"";
+        location.href = "login.html"
+    })
+})

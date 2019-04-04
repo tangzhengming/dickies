@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    color:#444;
+}
+.body{
+    max-width: 1180px;
+    margin:0 auto;
+    padding:0 10px;
+}
+.body>h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin:65px 0 10px;
+}
+.body>h1::after{
+    content:"";
+    display: block;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    width:100%;
+    height:2px;
+    margin:15px 0 10px;
+}
+.null{
+    margin-top:4rem;
+    padding-bottom:1.8rem;
+    display: none;
+}
+.body h2{
+    text-align: center;
+    font-size: 2.1875rem;
+    font-weight: 500;
+    margin:1.8rem 0;
+}
+.null>div{
+    float: none;
+    padding-bottom:4rem;
+    text-align: center;
+}
+.null>div>a{
+    color:#444;
+    text-decoration: underline;
+}
+.null>div>a:hover{
+    text-decoration: none;
+}
+.have::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.card-button{
+    margin-top:25px;
+    float:right;
+}
+.card-button>div{
+    clear: both;
+    width: 300px;
+    padding-bottom:33px;
+    border-bottom: 1px solid #ccc;
+}
+.have button{
+    display: inline-block;
+    width:134px;
+    height:34px;
+    background-color:#c41230;
+    color:#fff;
+    border-width: 2px;
+    border-style:solid;
+    border-color:#c41230;
+    padding:0 38px;
+    border-radius:4px;
+    box-sizing: content-box;
+    font-size: 1.25rem;
+    float: right;
+    cursor:pointer;
+}
+.have button:hover{
+    color:#c41230;
+    background-color:#fff;
+}
+.card-details{
+    clear: both;
+    padding-top:20px;
+}
+.tou{
+    display:flex;
+    background:#e5e5e5;
+    border:1px solid #e5e5e5;
+    border-radius:4px; 
+}
+.tou>div{
+    line-height: 1.375rem;
+    padding:0.65rem 0.9375rem 0.45rem 1.13rem;
+    font-size: .9375rem;
+    font-weight: 600;
+    font-family: source han sans,microsoft yahei,Helvetica,Arial,sans-serif;
+}
+.product{
+    width:30.137%;
+}
+.number{
+    width:22.7%
+}
+.pice{
+    width:12.4%;
+}
+.cont{
+    width:23.5%;
+}
+.cont>span{
+    float:right;
+}
+.details{
+    border:1px solid #e5e5e5;
+    border-top:0; 
+    font-size:.9375rem;
+}
+.details::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.detail{
+    width:30%;
+    float: left;
+    display: flex;
+}
+.detail img{
+    padding:10.5px 5px 33px;
+    width:100px;
+    height:130px;
+}
+.detail>div{
+    padding:21px 0;
+}
+.title>a{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.title>a:hover{
+    text-decoration: underline;
+}
+.color,.size{
+    margin-top:5px; 
+}
+.bianji{
+    margin-top:20px;
+}
+.bianji>a,#remove{
+    text-decoration: underline;
+}
+.bianji>a:hover{
+    text-decoration: none;
+}
+.number{
+    width:32%;
+    float: left;
+}
+.select{
+    width:58px;
+    padding:10.5px 15px 100px;
+    float: left;
+}
+.number1{
+    width:56px;
+    border:1px solid #333;
+    border-radius:5px;
+}
+.number>div:last-child{
+    padding-top:21px;
+}
+.number>div:last-child>span{
+    color:#c41230;
+    font-size: 1rem;
+}
+.number>div:last-child>div{
+    margin-top:18px;
+}
+#remove:hover{
+    color:#c41230
+}
+.price{
+    float: left;
+    padding-top:21px;
+}
+.conten{
+    float:right;
+    padding:5px 15px 0;
+    font-weight: 600;
+}
+.foot-left{
+    width:50%;
+    margin-top:25px;
+    float: left;
+}
+.card-foot::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.name{
+    font-size: 1.1rem;
+    font-weight: 600;   
+}
+.foot-left>input{
+    width:230px;
+    height: 40px;
+    margin-top:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    text-indent: .8rem;
+    font-size:1rem;
+    margin-right:20px;
+}
+.foot-left>button{
+    float:none;
+    width:59px;
+    background:#003767;
+    border-color:#003767;
+    height:32px;
+}
+.foot-left>button:hover{
+    color:#003767;
+}
+.foot-right{
+    padding:15px;
+    float: right;
+    background: #e5e5e5;
+    margin-top:20px;
+    width:170px;
+    border-radius:5px;
+}
+.foot-right>div:first-child{
+    font-weight: 700;
+}
+.foot-right span{
+    font-size:1rem;
+    padding:3px 0;
+}
+.foot-right>div>span:first-child{
+    display: inline-block;
+    width:60px;
+    text-align: right;
+}
+.foot-right>div>span:last-child{
+    display: inline-block;
+    width:110px;
+    text-align: right;
+}
+.foot-right>div:last-child,.foot-right>div:last-child>span{
+    font-size: 25px;
+    font-weight: 600;
+}
+.foot-right>div:last-child>span{
+    padding-left:10px;
+}
+.card-button>a{
+    margin-right: 20px;
+    vertical-align:middle;
+}

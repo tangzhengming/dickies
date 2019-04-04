@@ -67,11 +67,11 @@ $("button").click(function(){
 		data:{email,upwd},
 		success:function(res){
 			if(res!=""){
-				alert("登录成功")
 				$("input").val("")
 				$(".notlogin").css("display","none");
 				var uname=res[0].uname;
-				document.cookie="uname="+uname;
+				document.cookie = "uname="+uname;
+				location.href = "account.html"
 			}else{
 				$(".notlogin").css("display","block")
 			}
