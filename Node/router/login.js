@@ -9,11 +9,16 @@ router.post('/',(req,res)=>{
         });
     var sql="select * from usename where email=? and upwd=?"
     pool.query(sql,[email,upwd],(err,result)=>{
-        if(err) throw err;
+    	if(err) throw err;
+    	if(result == ""){
+    		res.write(JSON.stringify(""));
+        	res.end();
+    	}else{
         var uid=result[0].uid
         req.session.uid=uid;
         res.write(JSON.stringify(result));
         res.end();
+       }
     })
 
 })

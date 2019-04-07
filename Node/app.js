@@ -1,9 +1,10 @@
-const express=require("express");
-const bodyParser=require("body-parser");
-const user=require('./router/user.js');
-const login=require('./router/login.js');
-const shouye=require('./router/shouye.js');
-const details=require('./router/details.js');
+const express = require("express");
+const bodyParser = require("body-parser");
+const user = require('./router/user.js');
+const login = require('./router/login.js');
+const shouye = require('./router/shouye.js');
+const details = require('./router/details.js');
+const card = require('./router/card.js');
 const session=require("express-session");
 //创建web服务器
 var server=express();
@@ -29,4 +30,5 @@ server.use('/zhuce',user);
 server.use('/login',login);
 server.use('/shouye',shouye);
 server.use('/details',details);
+server.use('/card',card);
 //127.0.0.1:3000/zhuce

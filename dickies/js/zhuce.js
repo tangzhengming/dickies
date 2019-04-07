@@ -122,6 +122,7 @@ function vail(txt,reg,html){
         data:{uname,email,puwd,phone,sex},
         success: function(res) {
             alert(res);
+   			location.href = "login.html"
             $("input").val("");
             $(".read>input:checkbox").attr("checked",false)
         }

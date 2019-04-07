@@ -57,7 +57,7 @@ $(function(){
                 <p class="product-subtitle">${result.subtitle}</p>
                </div>  
                <div class="product-price">
-                <span>¥${result.price.toFixed(2)}</span>
+                <span data-price=${result.price}>¥${result.price.toFixed(2)}</span>
                </div>
                <ul>
                 <li class="color">
@@ -243,7 +243,6 @@ $(function(){
 $(function(){
 	var value=$("#value").val()
 	$("#addBtn").on("click",function(){
-		console.log(value)
 		if(value<15){
 			value++;
 			$("#value").val(value);
@@ -262,7 +261,26 @@ $(function(){
 		var size=$(".available>a").hasClass("back background");
 		var color=$(".color_img div").hasClass("item show");
 		if(size&&color){
-			console.log(1)
+			var id = $(".product-id").html();
+			var price = $(".product-price").children("span").attr("data-price");
+			var title = $(".product-name").html();
+			var color = $(".color").children().eq(1).html();
+			var size = $(".size").children().eq(1).html();
+			var img = $(".big_img").attr("src");
+            var count = $("#value").val();
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1:3001/card",
+				data:{id,price,title,color,size,img,count},
+				dataType:"JSON",
+				success:function(res){
+					if(res.code == 0){
+						alert("请先登录才能加入购物车");
+						location.href = "login.html"
+					}
+					alert(res.msg);
+				}
+			});
 		}else{
 			$(".button>span").show();
 			setTimeout(function(){

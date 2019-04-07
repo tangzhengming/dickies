@@ -5,7 +5,7 @@ USE dickies;
 CREATE TABLE usename(
 	uid	TINYINT PRIMARY KEY AUTO_INCREMENT,
 	uname	VARCHAR(12),
-    email   VARCHAR(16),
+    email   VARCHAR(32),
 	upwd    VARCHAR(16),
     phone   VARCHAR(12),
     sex     BOOL,
@@ -31,6 +31,17 @@ CREATE TABLE details(
     big_url   VARCHAR(100000),
     color     VARCHAR(100)
 );
+CREATE TABLE card(
+	pid   TINYINT PRIMARY KEY AUTO_INCREMENT, 
+	id    VARCHAR(16),
+	uid   INT,
+	price DECIMAL(6,2),
+	title VARCHAR(60),
+	count INT,
+	color VARCHAR(8),
+	size  VARCHAR(8),
+	img   VARCHAR(64)
+)
 
 INSERT INTO main VALUES(NULL,"2019 SPRING","春季上新","http://127.0.0.1:3001/img/spring.jpg");
 
