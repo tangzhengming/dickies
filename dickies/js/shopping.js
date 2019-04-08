@@ -3,6 +3,11 @@ $(function(){
  $("#footer").load("weibu.html ")
 })
 $(function(){
+    var cookie = document.cookie.split("=")[1];
+    if(cookie == ""){
+        $(".null").css("display","block");
+        $(".have").css("display","none");
+    }else{
     $.ajax({
         url:"http://127.0.0.1:3001/card/details",
         type:"GET",
@@ -10,16 +15,11 @@ $(function(){
         dataType:"JSON",
         success:function(res){
            var html = "";
-           var count=[];
             if(res == ""){
                 $(".null").css("display","block");
                 $(".have").css("display","none");
             }else{
-                html+=`<div class="card-button">
-                    <button class="button">结算</button>
-                    <div></div>
-                </div>
-                <div class="card-details">
+                html+=`
                 <div class="tou">
                     <div class="product"><span>产品</span></div>
                     <div class="number"><span>数量</span></div>
@@ -36,11 +36,11 @@ $(function(){
                                 <div class="size"><span>尺码: </span> <span>${list.size}</span></div>
                                 <div class="bianji"><a href="javascript">编辑详情信息</a></div>
                             </div>
-                        </div>
-                        <div class="number">
+                        </div>`
+                        html += 
+                        `<div class="number">
                             <div class="select">
                                 <select name="number" class="number1">
-                                    <option value="1">1</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -60,7 +60,7 @@ $(function(){
                             </div>
                             <div>
                                 <span>有现货</span>
-                                <div><a href="javascript:;" id="remove">清除</a></div>
+                                <div><a href="javascript:;" class="remove" data-pid=${list.pid}>清除</a></div>
                             </div>
                         </div>
                         <div class="price">
@@ -70,35 +70,17 @@ $(function(){
                             <span class="subtotal"></span>
                         </div>
                      </div>`
-                     count.push(list.count);
                 }
-                html+=`<div class="card-foot">
-                <div class="foot-left">
-                    <div class="name">促销代码</div>
-                    <input type="text" placeholder="输入代码">
-                    <button>应用</button>
-                </div>
-                <div class="foot-right">
-                    <div><span>小计</span><span class="total">￥</span></div>
-                    <div><span>运费</span><span>不可用</span></div>
-                    <div>总价<span class="total">￥</span></div>
-                </div>
-            </div>
-            <div class="card-button">
-                <a href="men.html"><< 继续购物</a>
-                <button class="button">结算</button>
-                <div></div>
-            </div>`
-                $(".have").html(html);
-                    $(".number1").each(function(){
-                        for(var i=0;i<count.length;i++){
-                            var a=count[i]
-                            var option = $(this).children("option")
-                            console.log(option.eq(2))
-                        option.eq(a-1).attr("selected","selected")
+                $(".card-details").html(html);
+                for(var i=0;i<res.length;i++){
+                    var number = $(".number1").eq(i).children()
+                    var count = res[i].count
+                    for(var j=0;j<number.length;j++){
+                        if($(number[j]).val() == count){    
+                            $(number[j]).attr("selected",true)
                         }
-                    })
-                
+                    }
+                    }
                 $(".details").each(function(){
                     var number = $(this).find(".number1").val();
                     var price = $(this).find("#price").attr("data-price");
@@ -124,10 +106,24 @@ $(function(){
                         $(".total").html(a.toFixed(2));
                         })
                     })
+                $(".remove").on("click",function(){
+                    var pid = $(this).attr("data-pid");
+                    $.ajax({
+                        url:"http://127.0.0.1:3001/card/remove",
+                        data:{pid},
+                        type:"GET",
+                        dataType:"JSON",
+                        success:function(res){
+                            if(res.code == 1){
+                                location.reload() 
+                            }
+                        }
+                    })
+                })
             }
         }
     })
-  
+}
     })
     
 

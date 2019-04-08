@@ -37,3 +37,18 @@ $(function(){
         $(".exam").first().removeClass("active");
     }
 })
+$(function(){
+    var cookie = document.cookie.split("=")[1];
+    console.log(cookie)
+    if(cookie !=""){
+    $.ajax({
+        url:"http://127.0.0.1:3001/card/details",
+        type:"GET",
+        data:{},
+        dataType:"JSON",
+        success:function(res){
+            $("#cart").html("("+res.length+')');
+        }
+    })
+}   
+})

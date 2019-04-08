@@ -66,4 +66,13 @@ router.get("/details",(req,res)=>{
 		res.end()
 	})
 })
+router.get("/remove",(req,res)=>{
+	var pid = req.query.pid;
+	var sql = "DELETE FROM card WHERE pid=?"
+	pool.query(sql,[pid],(err,result)=>{
+		if(err) throw err;
+		res.write(JSON.stringify({code:1,msg:"删除成功"}));
+		res.end();
+	})
+})
 module.exports=router;

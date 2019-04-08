@@ -16,7 +16,7 @@ server.use(session({
     resave:false,
     saveUninitialized:true,
     cookie:{
-        maxAge:1000*60*60
+        maxAge:1000*120*120
     }
 }))
 //托管静态资源

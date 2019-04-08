@@ -277,8 +277,9 @@ $(function(){
 					if(res.code == 0){
 						alert("请先登录才能加入购物车");
 						location.href = "login.html"
-					}
-					alert(res.msg);
+					}else{
+                        alert(res.msg)
+                    }
 				}
 			});
 		}else{
